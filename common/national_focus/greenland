@@ -511,7 +511,7 @@ focus_tree = {
 	}
 		
 		focus = {
-		id = GRL_like_our_soviet_comrades
+		id = GRL_like_our_russian_comrades
 		icon = GFX_goal_support_communism
 		x = -3
 		y = 1
@@ -1097,12 +1097,13 @@ focus_tree = {
 	focus = {
 		id = GRL_build_new_schools_in_godthab
 		icon = GFX_focus_research
-		x = 2
+		x = 4
 		y = 0
 		cost = 10
 		relative_position_id = GRL_promote_urbanization
 		
 		completion_reward = {
+			add_political_power = -20
 			add_ideas = new_built_schools_in_godthab
 		}
 		
@@ -1122,8 +1123,9 @@ focus_tree = {
 		relative_position_id = GRL_build_new_schools_in_godthab
 		
 		completion_reward = {
-				add_ideas = new_built_schools
-			}
+			add_political_power = -20
+			add_ideas = new_built_schools
+		}
 		
 		available_if_capitulated = no
 		
@@ -1135,6 +1137,28 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = GRL_university_of_godthab
+		icon = GFX_focus_research2
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = GRL_build_new_schools_in_other_towns
+		
+		completion_reward = {
+			add_political_power = -40
+			add_research_slot = 1
+			}
+		
+		available_if_capitulated = no
+		
+		available = {
+		has_war = no
+		}
+		
+		prerequisite = { focus = GRL_build_new_schools_in_other_towns }
+	}
+	
+	focus = {
 		id = GRL_build_up_our_economy
 		icon = GFX_goal_generic_consumer_goods
 		x = 2
@@ -1143,6 +1167,11 @@ focus_tree = {
 		relative_position_id = GRL_build_new_schools_in_godthab
 
 		available_if_capitulated = no
+		
+		completion_reward = {
+		add_political_power = -50
+		add_ideas = GRL_building_up_the_economy
+		}
 		
 		available = {
 		has_war = no
@@ -1156,11 +1185,17 @@ focus_tree = {
 		y = 1
 		cost = 10
 		relative_position_id = GRL_build_up_our_economy
-		
-		completion_reward = {
-		}
 
 		available_if_capitulated = no
+		
+		completion_reward = {
+		add_political_power = -50
+		
+		swap_ideas = {
+		remove_idea = GRL_building_up_the_economy 
+		add_idea = GRL_building_up_the_economy2 
+			}
+		}
 		
 		available = {
 		has_war = no
@@ -1219,8 +1254,17 @@ focus_tree = {
 		relative_position_id = GRL_continuing_economic_growth
 		
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				prioritize = { 101 }
+					add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+			}
 		}
-
+	
 		available_if_capitulated = no
 		
 		available = {
