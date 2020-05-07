@@ -106,10 +106,6 @@ set_popularities = {
 
 set_convoys = 0
 
-add_ideas = {
-	GRL_erik_the_reds_land
-}
-
 create_country_leader = {
 	name = "Thorvald Stauning"
 	desc = "POLITICS_THORVALD_STAUNING_DESC"
