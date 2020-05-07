@@ -3937,4 +3937,41 @@ leader_traits = {
 			}
 		}
 	}
-}
+arms_factory_leader = {
+		sprite = 10
+		random = yes
+		production_speed_arms_factory_factor = 0.2
+		production_speed_dockyard_factor = 0.2		
+		production_speed_fuel_silo_factor = 0.1
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	great_business_man = {
+		sprite = 10
+		random = yes
+		production_speed_industrial_complex_factor = 0.2
+		production_speed_infrastructure_factor = 0.2
+		production_speed_synthetic_refinery_factor = 0.1
+economy_cost_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+	}
+	}
+	
+	supreme_commander_on_field_of_duty = {
+		sprite = 14
+		experience_gain_army = 0.1
+attrition = -0.04
+army_morale_factor = 0.1
+		army_infantry_attack_factor = 0.1
+		army_infantry_defence_factor = 0.2
+		
+		ai_will_do = {
+			factor = 500
+		}
+		}
+	}

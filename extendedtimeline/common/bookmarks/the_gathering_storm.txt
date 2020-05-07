@@ -38,19 +38,21 @@ bookmarks = {
 		"GRL"={
 			history = "GRL_GATHERING_STORM_DESC"
 			ideology = democratic
-			ideas = {
-				GRL_erik_the_reds_land
-				
-			}	
 			focuses = {
 				GRL_sever_ties_with_denmark
 				GRL_improve_relations_with_denmark
 				GRL_encourage_new_settlements
 			}			
 		}
-		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
+		
+		"ROM"={
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			}
+		
+	"---"={
+	history = "OTHER_GATHERING_STORM_DESC"
+	}
 
 
 		# minors from DLC ####
@@ -161,21 +163,6 @@ bookmarks = {
 				HUN_proclaim_the_restoration_of_austria_hungary
 				HUN_secret_rearmament
 				HUN_renounce_the_treaty_of_trianon
-			}
-		}
-
-		"ROM"={
-			minor = yes
-			history = "ROM_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				ROM_king_carol_ii_hedonist
-				neutrality_idea
-			}
-			focuses = {
-				ROM_balkans_dominance
-				ROM_institute_royal_dictatorship
-				ROM_preserve_greater_romania
 			}
 		}
 		
