@@ -8,7 +8,7 @@ state={
 	
 	history={
 		owner = FSA
-		add_claim_by = FRA
+		#add_claim_by = FRA
 		}
 	
 	manpower=30000

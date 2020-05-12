@@ -14,4 +14,4 @@ tags={
 }
 name="Extended Timeline"
 supported_version="1.9.2"
-path="C:/Users/Heini/Documents/Paradox Interactive/Hearts of Iron IV/mod/extendedtimeline"
+path="C:/Users/Hermann/Documents/Paradox Interactive/Hearts of Iron IV/mod/extendedtimeline"
