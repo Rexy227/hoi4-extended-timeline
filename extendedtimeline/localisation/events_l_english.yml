@@ -3217,6 +3217,13 @@
  lar_test.1.d:0 "TODO_LAR_BC: this is a test\nThis:[This.GetName]\nFrom:[From.GetName]\nFrom.From:[From.From.GetName]\nRoot:[Root.GetName]\n"
  lar_collab_gov.1.t:0 "[From.GetAdjective] Partisans in [Root.GetNameDef]"
  lar_collab_gov.1.d:0 "[From.GetNameDefCap] have recently increased their efforts to build collaboration within our nation. A number of [This.GetAdjective] politicians have started speaking rather sympathetically about the [From.GetAdjective] regime, and many partisans within our nation are turning their [From.GetRulingIdeology] sentiment into direct support for [From.GetNameDef].\n\nThe growing [From.GetAdjective] influence in our nation will undoubtedly lower [Root.GetAdjective] resistance and may even lead to a new [From.GetRulingIdeology] government in collaboration with [From.GetNameDef] in the event that [Root.GetNameDef] should capitulate."
+ 
+ 
+ 
+ ############MOD####################
+ 
+ 
+ 
  paraguay.1.t:0 "Revolucion Febrerista"
  paraguay.1.d:0 "sadlmkmkelbklernbkernbk"
  paraguay.1.a:0 "Viva la Revolucion!"
@@ -3232,7 +3239,22 @@
  paraguay.7.a:0 "Light planes are faster and versatile!."
  paraguay.7.b:0 "Heavy planes are stronger and have superior fire power!."
  bolivia.1.t:0 "Military Coup"
- bolivia.1.d:0 "Even tough Tejada and many politicians tried to blame the defeat on the Armed Forces, it was not enough to appease civil and military discontent throughout the country"
+ bolivia.1.d:0 "Even though Tejada and many politicians tried to blame the defeat on the Armed Forces, it was not enough to appease civil and military discontent throughout the country"
  bolivia.1.a:0 "I guess this is how it ends... for democracy, I'm flying out of here."
  bolivia.2.t:0 "Disappointment"
  bolivia.2.d:0 "
+ 
+ bolivia.4.t:0 "Politics Destroy Friendships"
+ bolivia.4.d:0 "Rumours of corruption?, of being permissive towards foreign interest?. A spark is just what our country needs for a major social revolt, we dont want a 'bolivian revolution'. This can't be tolerated." 
+ bolivia.4.a:0 "You might be my friend... but this is not what 'Socialismo Militar' is about"
+ bolivia.5.t:0 "Military High Command"
+ bolivia.5.d:0 "Now that we are in charge of the country we need to make sure we have capable leaders in our army. Hans Kundt has been part of the bolivian armed forces for many years, but during the Chaco War, a few mistakes and Salamanca threw him out, the old man is a Great War veteran and knows our country very well, surely we will need more than a generalship to bring him back... and it's been a long time since we had a Field Marshal in charge of our army. Or we can just rely on familiar faces, some Chaco veterans are quite popular amongst the people."
+ bolivia.5.a:0 "Bring back Kundt and secure a high commanding position for Villarroel."
+ bolivia.5.b:0 "Bring back Kundt and secure a high commanding position for Peñaranda."
+ bolivia.5.c:0 "Kundt is too old, better having known faces around than that crazy old man."
+ bolivia.6.t:0 "Peasant Militias"
+ bolivia.6.d:0 "Encouraging people to form militias seems to be a good measure, however we have recently notice small organizations and syndicates growing rapidly between the ranks. We have to be careful and keep and eye on this matter."
+ bolivia.6.a:0 "A moderate and last recruitment wouldn't do any difference."
+ bolivia.6.b:0 "They are still peasants and indigenous people, what could go wrong?"
+ bolivia.6.c:0 "We can't let this grow further. No more militias."
+ 

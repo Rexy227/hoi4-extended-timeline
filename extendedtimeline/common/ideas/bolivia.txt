@@ -76,6 +76,62 @@ ideas = {
 			
 		}
 		
+		BOL_peasant_militia = {
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = BOL
+			}
+			
+			modifier = {
+				fascism_drift = 0.01
+				communism_drift = 0.02
+
+			}
+		
+		}
+		BOL_peasant_militia2 = {
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = BOL
+			}
+			
+			modifier = {
+				fascism_drift = 0.03
+				communism_drift = 0.05
+
+			}
+		
+		}
+		BOL_peasant_militia3 = {
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = BOL
+			}
+			
+			modifier = {
+				fascism_drift = 0.07
+				communism_drift = 0.1
+
+			}
+		
+		}
+		
+		BOL_mend_our_wounds = {
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = BOL
+			}
+			modifier = {
+				war_support_factor  = -0.1
+				political_power_factor = -0.1
+				
+			}
+		}
+		
 		
 		BOL_infraestructure_effort = {
 			picture = generic_build_infrastructure
@@ -98,8 +154,8 @@ ideas = {
 	}
 	
 	
-	
-	# MILITARY
+#####################################
+
 
 
 	political_advisor = {
@@ -181,6 +237,10 @@ ideas = {
 			allowed = {
 				original_tag = BOL
 			}
+			available = {
+				has_completed_focus = bol_military_socialism
+				has_government = neutrality
+			}
 			
 			traits = { popular_figurehead }
 		}
@@ -194,7 +254,7 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = bol_building_neutrality
-				has_government = neutrality
+				#has_government = neutrality
 			}
 			
 			
@@ -233,6 +293,10 @@ ideas = {
 		
 	}
 
+	
+#####################################
+	
+	
 	army_chief = {
 
 		BOL_gualberto_villarroel_lopez = {
@@ -266,6 +330,11 @@ ideas = {
 		}
 	}
 
+	
+	
+#####################################
+	
+	
 	air_chief = {
 
 		BOL_jose_santos_quinteros = {
@@ -300,6 +369,10 @@ ideas = {
 
 	}
 
+	
+	
+#####################################
+	
 	navy_chief = {
 
 		BOL_gil_ibarra_juarez = {
@@ -333,6 +406,8 @@ ideas = {
 		}
 	}
 
+	
+#####################################
 	high_command = {
 
 		BOL_tomas_monje_gutierrez = {
@@ -400,6 +475,7 @@ ideas = {
 		}
 	}	
 
+#####################################
 	theorist = {
 		BOL_enrique_baldivieso_aparicio = {
 			ledger = army

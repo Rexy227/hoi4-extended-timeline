@@ -26,7 +26,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 25
+		x = 21
 		y = 0
 		cost = 10
 
@@ -42,10 +42,10 @@ focus_tree = {
 	focus = {
 		id = bol_rebuild_nation
 		icon = GFX_focus_research
-		#prerequisite= { focus = par_sov_mission }
+		prerequisite= { focus = bol_1938_constitution }
 
 		x = 35
-		y = 0
+		y = 2
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -66,7 +66,7 @@ focus_tree = {
 		prerequisite= { focus = bol_rebuild_nation }
 
 		x = 35
-		y = 1
+		y = 3
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -132,7 +132,7 @@ focus_tree = {
 		prerequisite= { focus = bol_andean_roads }
 
 		x = 35
-		y = 2
+		y = 4
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -169,7 +169,7 @@ focus_tree = {
 		prerequisite= { focus = bol_building_a_country }
 
 		x = 33
-		y = 3
+		y = 5
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -192,7 +192,7 @@ focus_tree = {
 		prerequisite= { focus = bol_building_a_country }
 
 		x = 35
-		y = 3
+		y = 5
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -216,7 +216,7 @@ focus_tree = {
 		prerequisite= { focus = bol_building_a_country }
 
 		x = 37
-		y = 3
+		y = 5
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		available_if_capitulated = no
@@ -240,7 +240,7 @@ focus_tree = {
 		prerequisite = { focus = bol_blame_military_hc }
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 25
+		x = 21
 		y = 1
 		cost = 9.4
 
@@ -262,7 +262,7 @@ focus_tree = {
 		mutually_exclusive = { focus = bol_political_turmoil }
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 30
+		x = 25
 		y = 2
 		cost = 10
 
@@ -270,8 +270,10 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-
-		
+			add_political_power = 70
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = BOL_german_busch_beccera
+			country_event = {id = bolivia.5 }
 		}
 
 	}
@@ -282,7 +284,7 @@ focus_tree = {
 		prerequisite = { focus =bol_military_socialism}
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 30
+		x = 25
 		y = 3
 		cost = 10
 
@@ -290,6 +292,19 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
+			add_stability = 0.10
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.20
+			}
 
 		
 		}
@@ -302,37 +317,35 @@ focus_tree = {
 		prerequisite = { focus =bol_military_socialism2}
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 30
+		x = 25
 		y = 4
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
 		
-		completion_reward = {
-			create_country_leader = {
-				name = "Germán Busch Becerra"
-				desc = "POLITICS_GERMAN_BUSCH_DESC"
-				picture = "Portrait_USA_Franklin_Roosevelt.dds"
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-					#
-				}
+		available = {
+			#is_subject = no
+			AND = {
+				date > 1937.4.25
 			}
+
+		}
+		
+		completion_reward = {
+			country_event = { id = bolivia.4 }
 		
 		}
 
 	}
-	
+
 	focus = {
-		#1938 Busch envia una mision a alemania en busca de "inspiracion"
-		id = bol_germany_mission
+		id = bol_rightful_president
 		icon = GFX_focus_research
-		prerequisite = { focus = bol_military_socialism3 }
+		prerequisite = { focus =bol_military_socialism3}
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 27
+		x = 25
 		y = 5
 		cost = 10
 
@@ -340,21 +353,61 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		completion_reward = {
-			create_country_leader = {
-				name = "Germán Busch Becerra"
-				desc = "POLITICS_GERMAN_BUSCH_DESC"
-				picture = "Portrait_USA_Franklin_Roosevelt.dds"
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-					#
-				}
-			}
+			
 		
 		}
-		
 
 	}
+	
+	focus = {
+		id = bol_dictatorship
+		icon = GFX_focus_research
+		prerequisite = { focus = bol_rightful_president }
+		#prerequisite= { focus = par_sov_mission }
+
+		x = 25
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+
+		completion_reward = {
+
+		
+		}
+
+	}
+	focus = {
+		id = bol_the_enigma
+		icon = GFX_focus_research
+		prerequisite = { focus = bol_dictatorship }
+		#prerequisite= { focus = par_sov_mission }
+
+		x = 25
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		available = {
+			#is_subject = no
+			AND = {
+				date > 1939.6.10
+			}
+
+		}
+		
+		completion_reward = {
+
+		
+		}
+
+	}
+	
+
 	
 	
 	
@@ -364,7 +417,7 @@ focus_tree = {
 		prerequisite = { focus = bol_the_only_reason }
 		mutually_exclusive = { focus = bol_military_socialism }
 	
-		x = 20
+		x = 17
 		y = 2
 		cost = 10
 
@@ -449,7 +502,7 @@ focus_tree = {
 		mutually_exclusive = { focus = bol_left_wing }
 		
 	
-		x = 25
+		x = 19
 		y = 3
 		cost = 10
 
@@ -470,7 +523,7 @@ focus_tree = {
 		
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 25
+		x = 19
 		y = 4
 		cost = 10
 		
@@ -499,7 +552,7 @@ focus_tree = {
 	
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 25
+		x = 19
 		y = 5
 		cost = 10
 
@@ -517,17 +570,26 @@ focus_tree = {
 	focus = {
 		id = bol_reform
 		icon = GFX_focus_research
-		prerequisite = { focus = bol_comm_ref focus = bol_falangist_ref focus = bol_military_socialism2 }
+		
 
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 25
-		y = 6
-		cost = 10
+		x = 39
+		y = 0
+		cost = 14.3
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
 		
+		available = {
+			OR = {
+				has_completed_focus = bol_comm_ref
+				has_completed_focus = bol_falangist_ref
+				has_completed_focus = bol_rightful_president
+			}
+
+		}
+	
 		completion_reward = {
 
 		
@@ -542,8 +604,60 @@ focus_tree = {
 
 		#prerequisite= { focus = par_sov_mission }
 
-		x = 25
-		y = 7
+		x = 39
+
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+
+		available = {
+			date > 1937.12.25
+		}
+		completion_reward = {
+
+		
+		}
+
+	}
+
+	focus = {
+		id = bol_army_reform
+		icon = GFX_focus_research
+		prerequisite = { focus = bol_1938_constitution }
+
+		#prerequisite= { focus = par_sov_mission }
+
+		x = 39
+
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+		
+		completion_reward = {
+
+		
+		}
+
+	}
+
+	
+	
+	
+	focus = {
+		id = bol_economy_reform
+		icon = GFX_focus_research
+		prerequisite = { focus = bol_1938_constitution  }
+		prerequisite = { focus = bol_ypfb }
+
+		#prerequisite= { focus = par_sov_mission }
+
+		x = 43
+
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -559,33 +673,52 @@ focus_tree = {
 	focus = {
 		id = bol_ypfb
 		icon = GFX_focus_research
-		prerequisite = { focus = bol_comm_ref focus = bol_falangist_ref focus = bol_military_socialism2 }
+		#prerequisite = { focus = bol_comm_ref focus = bol_falangist_ref focus = bol_military_socialism3 }
 
-
-		x = 21
-		y = 6
+		x = 43
+		y = 1
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = no
 		
 		available = {
-		
-			has_government = communism
+			OR = {
+				has_completed_focus = bol_military_socialism3
+				has_completed_focus = bol_falangism
+				has_completed_focus = bol_workers_movement			
+			}
+
 		}
 		
 		completion_reward = {
+			487 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
 
-		
+			}
 		}
 
 	}
 
 	focus = {
-		id = bol_clean_army_image
+		id = bol_the_militias
 		icon = GFX_focus_research
 		#prerequisite = {  }
-
+	
 
 		x = 3
 		y = 0
@@ -595,10 +728,103 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = {
-				has_government = democratic
+			OR = {
+				has_completed_focus = bol_political_turmoil
+				has_completed_focus = bol_military_socialism
 			}
-			has_completed_focus = bol_reform
+
+		}
+		
+		
+		completion_reward = {
+			add_manpower = 20000
+			add_ideas = BOL_peasant_militia
+		
+		}
+
+	}
+	focus = {
+		#1938 Busch envia una mision a alemania en busca de "inspiracion"
+		id = bol_germany_mission
+		icon = GFX_focus_research
+		#prerequisite = { focus = bol_military_socialism3 }
+		#prerequisite= { focus = par_sov_mission }
+
+		x = 5
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+		
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = bol_military_socialism2
+					has_government = neutrality				
+				}
+				AND = {
+					has_completed_focus = bol_falangist_ref
+					has_government = fascism
+				}
+			}
+
+		}
+		completion_reward = {
+
+		
+		}
+		
+
+	}
+	
+	focus = {
+		id = bol_mend_our_wounds
+		icon = GFX_focus_research
+		prerequisite = { focus = bol_the_militias }
+
+
+		x = 3
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		available_if_capitulated = no
+		
+		available = {
+			has_completed_focus = bol_military_socialism2
+
+		}
+		
+		
+		completion_reward = {
+		
+
+		
+			remove_ideas = BOL_military_blame
+			add_ideas = BOL_mend_our_wounds
+		
+		
+		}
+
+	}
+
+	focus = {
+		id = bol_building_an_army
+		icon = GFX_focus_research
+		prerequisite = { focus = bol_mend_our_wounds }
+
+
+		x = 3
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		available_if_capitulated = no
+		
+		available = {
+			has_completed_focus = bol_army_reform
+
 		}
 		
 		
@@ -608,7 +834,6 @@ focus_tree = {
 		}
 
 	}
-
 	
 	
 	focus = {
@@ -617,7 +842,7 @@ focus_tree = {
 		#prerequisite = {  }
 
 
-		x = 7
+		x = 9
 		y = 0
 		cost = 10
 
@@ -625,10 +850,50 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			NOT = {
-				has_government = democratic
+			OR = {
+				has_completed_focus = bol_military_socialism
+				has_completed_focus = bol_political_turmoil
 			}
-			has_completed_focus = bol_reform
+
+		}
+	
+		
+		completion_reward = {
+			air_experience = 15
+			random_owned_controlled_state = {
+				prioritize = { 806 }
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 60
+				producer = FRA
+			}
+		}
+
+	}
+	
+	focus = {
+		id = bol_air_2
+		icon = GFX_focus_research
+		prerequisite = {  focus = bol_air_1 }
+
+
+		x = 9
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		available_if_capitulated = no
+		
+		available = {
+
+			has_completed_focus = bol_army_reform
 		}
 	
 		
