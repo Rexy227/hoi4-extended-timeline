@@ -217,6 +217,16 @@ bookmarks = {
 			minor = yes
 			history = "ROM_BLITZKRIEG_DESC"
 			ideology = neutrality
+			ideas = {
+				ROM_king_carol_ii_hedonist
+				ROM_preserve_greater_romania
+				ROM_iron_guard
+			}
+			focuses = {
+				ROM_balkans_dominance
+				ROM_institute_royal_dictatorship
+				ROM_preserve_greater_romania
+			}
 		}
 		
 		"YUG"={

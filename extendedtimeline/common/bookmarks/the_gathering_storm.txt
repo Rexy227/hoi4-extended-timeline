@@ -46,11 +46,6 @@ bookmarks = {
 			}			
 		}
 		
-		"ROM"={
-			history = "ROM_GATHERING_STORM_DESC"
-			ideology = neutrality
-			}
-		
 	"---"={
 	history = "OTHER_GATHERING_STORM_DESC"
 	}
@@ -182,6 +177,23 @@ bookmarks = {
 				YUG_establish_the_banovina_of_croatia
 			}
 		}
+		
+		"ROM"={
+			minor = yes
+			history = "ROM_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+				ROM_king_carol_ii_hedonist
+				ROM_preserve_greater_romania
+				ROM_iron_guard
+			}
+			focuses = {
+				ROM_balkans_dominance
+				ROM_institute_royal_dictatorship
+				ROM_preserve_greater_romania
+			}
+		}
+		
 		"CHI"={
 			minor = yes
 			history = "CHI_GATHERING_STORM_DESC"
