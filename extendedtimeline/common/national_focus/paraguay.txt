@@ -256,7 +256,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = par_claim_bo
+		id = par_claim_bolivia
 		icon = GFX_focus_yug_pan_slavic_congress
 
 		prerequisite= { focus = par_soviet_mil_mission }
@@ -269,9 +269,25 @@ focus_tree = {
 		
 			available_if_capitulated = no
 			
-			completion_reward = {
-
-				add_research_slot = 1
+bypass = {
+			AND = {
+				OR = {
+					BOL = {
+						is_in_faction_with = PAR 
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+		
+			add_state_claim = 806
+			create_wargoal = {
+				type = take_state_focus
+				target = BOL
+				expire = 0
+				generator = { 806 }
+			}
 				
 
 
@@ -279,7 +295,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = par_claim_arg
+		id = par_claim_argentina
 		icon = GFX_focus_yug_pan_slavic_congress
 
 		prerequisite= { focus = par_soviet_mil_mission }
@@ -304,8 +320,8 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			add_state_core = 804
-			add_state_core = 803
+			add_state_claim = 804
+			add_state_claim = 803
 			create_wargoal = {
 				type = take_state_focus
 				target = ARG
@@ -328,7 +344,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = par_claim_bra
+		id = par_claim_brazil
 		icon = GFX_focus_yug_pan_slavic_congress
 
 		prerequisite= { focus = par_soviet_mil_mission }
@@ -343,7 +359,7 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			add_state_core = 805
+			add_state_claim = 805
 			
 			create_wargoal = {
 				type = take_state_focus
