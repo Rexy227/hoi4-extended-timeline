@@ -1,0 +1,246 @@
+ideas = {
+
+	country = {
+	
+		GRL_new_built_schools_in_godthab = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			research_speed_factor = 0.001
+			}
+			}
+			
+		GRL_new_built_schools = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			research_speed_factor = 0.01
+			}
+		}
+		
+		GRL_severing_ties_with_denmark = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			autonomy_gain = 1
+			}
+			}
+			
+		GRL_encouraging_new_settlements = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = 0.001
+			}
+			}
+			
+		GRL_promoting_urbanization = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			monthly_population = 0.001
+			}
+			}
+			
+		GRL_internal_stabilization = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_weekly = 0.001
+			}
+			}
+			
+		GRL_rise_of_monarchy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			neutrality_drift = 0.1
+			}
+			}
+			
+		GRL_rise_of_democracy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			democratic_drift = 0.1
+			}
+			}
+			
+		GRL_rise_of_communism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			communism_drift = 0.1
+			}
+			}
+			
+		GRL_rise_of_fascism = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			fascism_drift = 0.1
+			}
+			}
+			
+		GRL_preparing_the_people_for_independence = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_weekly = 0.005
+			}
+		}
+		GRL_building_up_the_economy = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_industrial_complex_factor = 0.01
+			}
+		}
+		
+		GRL_building_up_the_economy2  = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_production_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_industrial_complex_factor = 0.02
+			}
+		}
+		
+		GRL_searching_for_ressources = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			research_speed_factor = 0.001
+			}
+			}
+	}
+}
