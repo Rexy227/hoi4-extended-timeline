@@ -4,8 +4,22 @@ bookmarks = {
 		desc = "GATHERING_STORM_DESC"
 		date = 1936.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "PAR"
+		default_country = "PRU"
 		default = yes
+		
+		"PRU"={
+			#history = "BOL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				PRU_broken_left
+				PRU_border_conflicts
+				PRU_divided_society
+				
+			}	
+			focuses = {
+				
+			}			
+		}
 		
 		"BOL"={
 			history = "BOL_GATHERING_STORM_DESC"
@@ -45,14 +59,15 @@ bookmarks = {
 				GRL_encourage_new_settlements
 			}			
 		}
-	"---"={
-	history = "OTHER_GATHERING_STORM_DESC"
-	}
-}
+		"---"={
+		history = "OTHER_GATHERING_STORM_DESC"
+		}
+
 
 		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
+    }
 }

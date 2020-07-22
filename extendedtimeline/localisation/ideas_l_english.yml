@@ -2685,3 +2685,13 @@
  BOL_peasant_militia:0 "The Peasant Militia"
  BOL_peasant_militia_desc:0 "Armed and organized peasants... most of the time it doesn't end very well."
  
+ PRU_com_persecution:0 "Political Persecution"
+ PRU_com_persecution_desc:0 "After the assassination of Sanchez Cerro supposedly perpetrated by an APRA sympathizer a few years ago; communist, left wing politicians and members of the APRA party are being persecuted for treason and conspiracy against our fatherland"
+ PRU_broken_left:0 "Broken Left Wing"
+ PRU_broken_left_desc:0 "Members of the PCP, originally founded as PSP (Partido Socialista Peruano) by José C. Mariategui, broke into minor and and less transcendent parties after his death in 1930. The APRA (Alianza Popular Revolucionaria Americana), founded by Victor R. Haya de la Torre, originally as a marxist and anti-imperialist party, gained even more popularity by attracting centre-left members. This all changed during Sánchez Cerro government and even more after his assassination. Today, ad portas of presidential elections, is not rare seeing old left-wing politicians in prison or preaching a more centrist ideology... anything is better than a fascist"
+ PRU_divided_society:0 "Los de arriba y los de abajo"
+ PRU_divided_society_desc:0 "Perú, like many other latin american countries, lack a sense of unity in terms of society. Centralism, despotism, classism and even racism towards mestizo or indigenous people are some of the old wounds dragged from the colonial era"
+ PRU_border_conflicts:0 "Border Conflicts"
+ PRU_border_conflicts_desc:0 "A recent war against Colombia and some border skirmishes against Ecuador, regarding undefined national delimitation, have made of army recruitment something recurrent and appealing for the people"
+ 
+ 

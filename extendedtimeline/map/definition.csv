@@ -2150,7 +2150,7 @@
 2149;10;42;90;land;false;desert;3
 2150;10;42;140;land;false;forest;3
 2151;10;45;55;land;false;plains;5
-2152;10;48;20;land;true;urban;1
+2152;10;48;20;land;false;forest;3
 2153;10;51;85;land;true;mountain;3
 2154;10;54;50;land;false;jungle;5
 2155;10;54;155;land;false;plains;4

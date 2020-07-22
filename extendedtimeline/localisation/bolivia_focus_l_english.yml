@@ -23,4 +23,9 @@
  bol_air_1_desc:0 "We had planes during the Chaco War, but not a single air base near the conflict area and even though the war is 'over' we need to make sure our sky is  properly defended, as soon as possible, at any cost."
  bol_the_militias:0 "The Peasant Militias"
  bol_the_militias_desc:0 "Rebuilding the bolivian Armed Forces after our recent loss will take some time. Recruitment is a difficult task in these days, but we can encourage peasants and indigenous people to form militias, just in case we have to defend our country. This could also be the first step to the process of forming a proper army."
+
+
+#PERU
+ per_persecution:0 "Political Persecution"
+ per_persecution_desc:0 "Left-wing politicians and sympathizers have been conspiring against our nation. They murdered a president already, and they won't stop until getting into power. We have to stop them, by declaring left-wing parties like APRA illegal and thus unable to participe in the next elections"
  
