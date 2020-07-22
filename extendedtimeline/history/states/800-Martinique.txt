@@ -1,0 +1,16 @@
+state={
+	id=800
+	name="STATE_800"
+	state_category = tiny_island
+	provinces={
+		177 
+	}
+	
+	history={
+		owner = FMR
+		add_claim_by = FRA
+		}
+	
+	manpower=200000
+	buildings_max_level_factor=1.000
+}

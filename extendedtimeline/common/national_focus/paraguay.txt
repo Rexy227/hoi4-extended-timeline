@@ -1,0 +1,1412 @@
+﻿search_filter_prios = {
+
+}
+
+focus_tree = {
+	id = paraguay_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PAR
+		}
+	}
+	
+	
+	default = no
+	reset_on_civilwar = no
+
+	#initial_show_position = {
+	#		focus = paraguay_focus
+	#}
+
+
+	
+	focus = {
+		id = par_revolucion
+		icon = GFX_goal_generic_demand_territory
+		mutually_exclusive = { focus = par_something_wrong }
+		x = 13
+		y = 0
+		cost = 2.3
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+	
+				add_political_power = 100
+				add_stability = -0.15
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+				country_event = { id = paraguay.1 }
+
+				#set_politics = {
+				#	ruling_party = communism
+				#}
+
+				hidden_effect = {
+					division_template = {
+						name = "Regimientos PAR"
+						priority = 2
+						#division_names_group = ROM_MTN_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+					}
+				
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 301 }
+						create_unit = {
+							division = "name = \"Primer Regimiento\" division_template = \"Regimientos PAR\" start_experience_factor = 0.25" 
+							owner = PAR
+						}
+						create_unit = {
+							division = "name = \"Segundo Regimiento\" division_template = \"Regimientos PAR\" start_experience_factor = 0.25" 
+							owner = PAR
+						}
+					}
+				}	
+				add_ideas = PAR_febrerism_mov
+			}
+	}
+	
+	focus = {
+		id = par_democratic_coup
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		prerequisite = { focus = par_revolucion }
+		
+		x = 20
+		y = 1
+		cost = 1
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			is_subject = no
+			AND = {
+				date > 1937.7.24
+				date < 1937.8.30
+			}
+
+		}
+
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			set_politics = {
+				ruling_party = democratic
+			}
+			create_country_leader = {
+				name = "Felix Paiva"
+				desc = "POLITICS_FELIX_PAIVA_DESC"
+				picture = "Portrait_USA_Franklin_Roosevelt.dds"
+				expire = "1965.1.1"
+				ideology = liberalism
+				traits = {
+					#
+				}
+			}
+
+			#hidden_effect = {
+			#	news_event = { id = news.322 days = 1 }
+			#}
+			
+		}
+		
+	}
+	
+	focus = {
+		id = par_pop_education
+		icon = GFX_focus_research
+		prerequisite= { focus = par_sov_mission }
+
+		
+
+		x = 5
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+
+				add_research_slot = 1
+				
+
+
+		}
+	}	
+	
+	
+	
+	
+	
+	focus = {
+		id = par_sov_mission
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite= { focus = par_revo_reforms2}
+
+		x = 6
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+
+				add_research_slot = 1
+				
+
+
+		}
+	}
+
+	focus = {
+		id = par_pcp
+		icon = GFX_focus_generic_soviet_politics
+
+		prerequisite= { focus = par_sov_mission }
+		
+
+		x = 7
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+			add_political_power = 75
+			add_manpower = 10000
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = PAR_oscar_creydt
+
+		}
+	}
+	
+	focus = {
+		id = par_new_guarani
+		icon = GFX_focus_yug_pan_slavic_congress
+
+		
+		x = 2
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+
+				add_research_slot = 1
+				
+
+
+		}
+	}
+	focus = {
+		id = par_soviet_mil_mission
+		icon = GFX_focus_yug_pan_slavic_congress
+
+		prerequisite= { focus = par_pcp }
+		prerequisite= { focus = par_mil_reform2 }
+		x = 7
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+			army_experience = 25
+			add_command_power = 25
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			remove_ideas = PAR_febrerism_mov
+			add_ideas = PAR_febrerism_mov_2
+
+
+
+		}
+	}
+
+	focus = {
+		id = par_claim_bolivia
+		icon = GFX_focus_yug_pan_slavic_congress
+
+		prerequisite= { focus = par_soviet_mil_mission }
+
+		x = 7
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+bypass = {
+			AND = {
+				OR = {
+					BOL = {
+						is_in_faction_with = PAR 
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+		
+			add_state_claim = 806
+			create_wargoal = {
+				type = take_state_focus
+				target = BOL
+				expire = 0
+				generator = { 806 }
+			}
+				
+
+
+		}
+	}
+
+	focus = {
+		id = par_claim_argentina
+		icon = GFX_focus_yug_pan_slavic_congress
+
+		prerequisite= { focus = par_soviet_mil_mission }
+
+		x = 5
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+		
+		bypass = {
+			AND = {
+				OR = {
+					ARG = {
+						is_in_faction_with = PAR 
+						NOT = { country_exists = ARG }
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+		
+			add_state_claim = 804
+			add_state_claim = 803
+			create_wargoal = {
+				type = take_state_focus
+				target = ARG
+				expire = 0
+				generator = { 799 }
+			}
+			
+			hidden_effect = {
+				create_wargoal = {
+					type = take_state_focus
+					target = ARG
+					expire = 0
+					generator = { 803 }
+				}
+			
+				#news_event = { hours = 6 id = news.233 }
+			}	
+
+		}
+	}
+	
+	focus = {
+		id = par_claim_brazil
+		icon = GFX_focus_yug_pan_slavic_congress
+
+		prerequisite= { focus = par_soviet_mil_mission }
+
+		x = 3
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+		
+			add_state_claim = 805
+			
+			create_wargoal = {
+				type = take_state_focus
+				target = BRA
+				expire = 0
+				generator = { 805 }
+			}
+			
+		
+			#news_event = { hours = 6 id = news.233 }
+			
+		}
+	} 
+	
+	focus = {
+		id = par_join_comintern
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = par_equipment_effort_2 }
+
+		#prerequisite= { focus = par_soviet_mil_mission }
+		x = 10
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+
+				add_research_slot = 1
+				
+
+
+		}
+	}
+	focus = {
+		id = par_tech_coop
+		prerequisite = { focus = par_join_comintern }
+	
+		icon = GFX_focus_research
+		x = 10
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+				completion_reward = {
+		
+				add_research_slot = 1
+				}
+	}
+
+
+	focus = {
+		id = par_armor_innovation
+		prerequisite = { focus = par_tech_coop }
+
+		
+	
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 10
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+				completion_reward = {
+		
+		
+				}
+	}
+	
+		focus = {
+		id = par_bla
+		icon = GFX_goal_generic_demand_territory
+		prerequisite= { focus = par_invite_capitalist }
+
+		x = 23
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+
+				add_research_slot = 1
+				
+
+
+		}
+	}
+	focus = {
+		id = par_join_allies
+		icon = GFX_goal_generic_demand_territory
+		prerequisite= { focus = par_bla }
+
+		x = 23
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+
+				add_research_slot = 1
+				
+
+
+		}
+	}
+	
+	focus = {
+		id = par_something_wrong
+		icon = GFX_focus_prc_infiltration
+		mutually_exclusive = { focus = par_revolucion }
+		x = 22
+		y = 0
+		cost = 2
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				add_political_power = 100
+				
+				country_event = { id = paraguay.2 }
+
+				hidden_effect = {
+					division_template = {
+						name = "Regimientos PAR"
+						priority = 2
+						#division_names_group = ROM_MTN_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+					}
+					random_owned_controlled_state = {
+						limit = { ROOT = { has_full_control_of_state = PREV } }
+						prioritize = { 301 }
+						create_unit = {
+							division = "name = \"Regimiento Democrata\" division_template = \"Regimientos PAR\" start_experience_factor = 0.25" 
+							owner = PAR
+						}
+					}
+				}
+
+
+
+			}
+	}	
+	
+	focus = {
+		id = par_secure_democracy
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite= {focus = par_something_wrong }
+		x = 22
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+
+			#SOV = { country_event = { id = wtt_germany.19 days = 1 } }
+			#hidden_effect = { news_event = { id = wtt_news.21 hours = 6 } }
+		    #country_event = { id = wtt_germany.24 }
+			add_timed_idea = { idea = PAR_dem_prop days = 75 }
+			add_ideas = PAR_sec_dem
+
+			
+		}
+	}
+	
+		focus = {
+		id = par_ask_support
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = par_secure_democracy focus = par_democratic_coup}
+		x = 22
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				add_political_power = 100
+				#necesito que USA nos ayude
+				
+
+
+			}
+	}
+	
+	focus = {
+		id = par_invite_capitalist
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = par_ask_support}
+		x = 22
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				add_political_power = 100
+				#necesito que USA nos ayude
+				
+
+
+			}
+	}
+	focus = {
+		id = par_invite_capitalist_2
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = par_invite_capitalist}
+		x = 21
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				add_political_power = 100
+				#necesito que USA nos ayude
+				
+
+
+			}
+	}
+	focus = {
+		id = par_industrial_investment
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = par_invite_capitalist_2 }
+		x = 19
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 301 }
+				#limit = {
+				#	ROOT = { has_full_control_of_state = PREV } 
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 1
+				#		include_locked = yes
+				#	}
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = par_chaco_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = par_industrial_investment focus = par_civ_industrial_2 }
+		x = 19
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = no
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		
+		available = {
+			has_full_control_of_state = 688
+		}
+		
+		completion_reward = {
+			688 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+	
+	focus = {
+		id = par_private_education
+		icon = GFX_focus_research
+		prerequisite = { focus = par_invite_capitalist_2}
+		x = 21
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				add_research_slot = 1
+				
+
+
+			}
+	}
+	
+
+	
+	focus = {
+		id = par_revo_reforms
+		prerequisite = { focus = par_revolucion }
+		icon = GFX_goal_generic_consumer_goods
+		x = 17
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				#add_ideas = GER_revive_the_kaiserreich
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+				add_war_support = 0.1
+				add_manpower = 15000
+				add_ideas = PAR_agrarian_reform
+
+
+			}
+	}
+
+	focus = {
+		id = par_revo_reforms2
+		prerequisite = { focus = par_revolucion }
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 11
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				#add_ideas = GER_revive_the_kaiserreich
+				add_political_power = 150
+				add_war_support = 0.05
+
+
+			}
+	}
+	
+	focus = {
+		id = par_the_guarani
+		prerequisite = { focus = par_revo_reforms2 }
+		icon = GFX_focus_fra_devalue_the_franc
+		x = 15
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				add_stability = 0.05
+				add_ideas = PAR_guarani
+
+			}
+	}
+	
+	focus = {
+		id = par_old_army
+		prerequisite = { focus = par_revo_reforms2 }
+		icon = GFX_focus_mex_caudillo_private_armies
+		x = 11
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+			completion_reward = {
+				#add_ideas = GER_revive_the_kaiserreich
+				army_experience = 15
+				add_manpower = 35000
+				
+
+			}
+	}
+	
+	focus = {
+		id = par_mil_reform
+		prerequisite = { focus = par_old_army }
+		prerequisite = { focus = par_the_guarani }		
+		icon = GFX_focus_generic_military_mission
+		x = 11
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+			
+		completion_reward = {
+		
+			add_ideas = PAR_renewed_armed_forces
+			country_event = { id = paraguay.3 }
+
+		}
+	}	
+
+	focus = {
+		id = par_air_reform
+		prerequisite = { focus = par_mil_reform }
+	
+		icon = GFX_goal_generic_build_airforce
+		x = 12
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+		
+			air_experience = 20
+
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 1.0
+				uses = 1
+				category = battlefield_support_tree
+			}
+			random_owned_controlled_state = {
+				prioritize = { 301 }
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			
+			random_owned_controlled_state = {
+				prioritize = {797}
+
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = par_air_reform_2
+		prerequisite = { focus = par_air_reform }
+	
+		icon = GFX_goal_generic_air_fighter2
+		x = 12
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+				completion_reward = {
+				add_manpower = 2500
+				country_event = { id = paraguay.7 }
+		
+				}
+	}
+	
+	focus = {
+		id = par_elite_1
+		prerequisite = { focus = par_air_reform_2 }
+
+	
+		icon = GFX_focus_generic_paratrooper
+		x = 12
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_ideas = PAR_elite_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+
+
+				technology = paratroopers
+				technology = tech_mountaineers
+
+			}
+		}
+	}
+	
+	focus = {
+		id = par_elite_2
+		prerequisite = { focus = par_join_comintern }
+		prerequisite = { focus = par_elite_1 }
+
+		icon = GFX_goal_generic_special_forces
+		x = 12
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+			
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+
+
+
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers2
+			}
+		}
+	}
+	
+	focus = {
+			id = par_mil_reform2
+			
+			prerequisite = { focus = par_mil_reform}
+			icon = GFX_focus_secret_rearmament
+			x = 10
+			y = 4
+			cost = 10
+
+				search_filters = { FOCUS_FILTER_POLITICAL }
+		
+				available_if_capitulated = no
+			
+				completion_reward = {
+		
+					add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 15000
+					producer = SOV
+					}
+					add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 100
+					producer = ITA
+					}
+				}
+	}
+
+	focus = {
+		id = par_equipment_effort
+		prerequisite = { focus = par_mil_reform2}
+	
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 10
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = par_equipment_effort_2
+		prerequisite = { focus = par_equipment_effort}
+		prerequisite = { focus = par_soviet_mil_mission}
+	
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 10
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+			add_ideas = PAR_arms_sov_license
+		}
+	}
+
+	focus = {
+		id = par_mechanic_army
+		prerequisite = { focus = par_join_comintern }
+		#prerequisite = { focus = par_soviet_mil_mission }
+	
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = 8
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+				completion_reward = {
+		
+		
+				}
+	}
+	
+
+
+
+	focus = {
+		id = par_industrial_reform
+		#prerequisite = { focus = par_revo_reforms2 focus = par_secure_democracy focus = par_democratic_coup}
+		prerequisite = { focus = par_construction_reform focus = par_invite_capitalist}
+		
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 17
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 301 }
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				#set_state_flag = ROM_danubian_transport_network_Inf
+			}
+			random_owned_controlled_state = {
+				prioritize = {688}
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				#set_state_flag = ROM_danubian_transport_network_Inf_2
+			}
+			random_owned_controlled_state = {
+				prioritize = { 797 }
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				#set_state_flag = ROM_danubian_transport_network_Inf_3
+				
+			}
+
+			add_ideas = PAR_infraestructure_effort
+
+		
+			
+		}
+	}
+	
+	focus = {
+		id = par_construction_reform
+
+		prerequisite = { focus = par_revo_reforms }
+		prerequisite = { focus = par_the_guarani }
+	
+		icon = GFX_goal_generic_construction
+		x = 17
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+			
+		completion_reward = {
+			
+			add_tech_bonus = {
+				
+				bonus = 1.0
+
+				technology = construction1
+
+
+			}
+
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+
+			}
+			add_ideas = PAR_industrial_dev
+			
+		}
+	}
+
+	focus = {
+		id = par_civ_industrial_1
+		prerequisite = { focus = par_industrial_reform}
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 17
+		y = 5
+		cost = 10
+
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 688 }
+				#limit = {
+				#	ROOT = { has_full_control_of_state = PREV } 
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 1
+				#		include_locked = yes
+				#	}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+
+			
+		}
+
+
+	}
+	
+	
+	focus = {
+		id = par_civ_industrial_2
+		prerequisite = { focus = par_civ_industrial_1 }
+		icon = GFX_focus_generic_industry_2
+		x = 17
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 797 }
+				#limit = {
+				#	ROOT = { has_full_control_of_state = PREV } 
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 1
+				#		include_locked = yes
+				#	}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			
+
+			
+		}
+	}
+	
+	focus = {
+		id = par_mil_industrial_1
+		prerequisite = { focus = par_industrial_reform }
+		prerequisite = { focus = par_mil_reform }
+		
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 15
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 797 }
+				#limit = {
+				#	ROOT = { has_full_control_of_state = PREV } 
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 1
+				#		include_locked = yes
+				#	}
+
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+
+			
+		}
+	}
+
+	focus = {
+		id = par_mil_industrial_2
+		prerequisite = { focus = par_mil_industrial_1 }
+		prerequisite = { focus = par_mil_reform2 }
+		icon = GFX_goal_generic_construct_military
+		x = 15
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = no
+		
+		completion_reward = {
+			#random_owned_controlled_state = {
+				#prioritize = { 688 }
+			688 = {
+				#limit = {
+				#	ROOT = { has_full_control_of_state = PREV } 
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 1
+				#		include_locked = yes
+				#	}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 8203
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 5165
+					instant_build = yes
+				}
+			}
+			301 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 2152
+					instant_build = yes
+				}
+			}
+			
+			hidden_effect = {
+				remove_ideas = PAR_chaco_defenders1
+			}
+
+			add_ideas = PAR_chaco_defenders2
+		}
+		
+	}
+	
+	focus = {
+		id = par_industrial_1
+		prerequisite = { focus = par_civ_industrial_2 focus = par_mil_industrial_2}
+
+		icon = GFX_focus_generic_industry_3
+		x = 15
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 301 }
+				#limit = {
+				#	ROOT = { has_full_control_of_state = PREV } 
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 1
+				#		include_locked = yes
+				#	}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+
+			
+		}
+	}	
+	focus = {
+		id = par_industrial_2
+		prerequisite = { focus = par_industrial_1}
+
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 15
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = no
+		available = {
+			has_war = yes
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 301 }
+				#limit = {
+				#	ROOT = { has_full_control_of_state = PREV } 
+				#	free_building_slots = {
+				#		building = industrial_complex
+				#		size > 1
+				#		include_locked = yes
+				#	}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+
+			
+		}
+	}	
+}

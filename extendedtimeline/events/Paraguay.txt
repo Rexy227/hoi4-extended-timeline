@@ -1,0 +1,142 @@
+# EVENTOS PARAGUAY
+
+
+add_namespace = paraguay
+
+#Revolucion Febrerista
+country_event = {
+	id = paraguay.1
+	title = paraguay.1.t
+	desc = paraguay.1.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = paraguay.1.a
+
+		add_war_support = 0.1
+		set_politics = {
+			ruling_party = communism
+		}
+
+	}
+}
+
+#Avoided Revolucion
+country_event = {
+	id = paraguay.2
+	title = paraguay.2.t
+	desc = paraguay.2.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = paraguay.2.a
+		#offered_support = {
+		#	value = 25
+		#	months = 24
+		#}
+		#offered_support = {
+		#value = 25
+		#months = 24
+		add_opinion_modifier = {
+			target = USA
+			modifier = democratic_leanings_good
+		}
+	}
+		
+}
+
+#RENOVAR FFAA
+country_event = {
+	id = paraguay.3
+	title = paraguay.3.t
+	desc = paraguay.3.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = paraguay.3.a
+
+		remove_unit_leader = 98145
+		
+		create_corps_commander = {
+			name = "Higinio Morinigo"
+			picture = "Portrait_USA_Geoffrey_Keyes.dds"
+			traits = { adaptable career_officer }
+			skill = 1
+
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		army_experience = 30
+	}
+	
+	option = {
+		name = paraguay.3.b
+
+		create_corps_commander = {
+			name = "Higinio Morinigo"
+			picture = "Portrait_USA_Geoffrey_Keyes.dds"
+			traits = { adaptable career_officer }
+			skill = 1
+
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+		
+}
+
+#Air Decision
+country_event = {
+	id = paraguay.7
+	title = paraguay.7.t
+	desc = paraguay.7.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = paraguay.7.a
+
+		add_tech_bonus = {
+			name = fighter_bonus
+			bonus = 1.0
+			uses = 2
+			technology = early_fighter
+			technology = fighter1
+			technology = fighter2
+			technology = CAS1
+			technology = CAS2
+		}
+	}
+	
+	option = {
+		name = paraguay.7.b
+
+		add_tech_bonus = {
+			name = bomber_bonus
+			bonus = 1.0
+			uses = 2
+			technology = early_bomber
+			technology = heavy_fighter1
+			technology = heavy_fighter2
+			technology = strategic_bomber1
+			technology = strategic_bomber2
+		}
+	}
+	
+}
+
