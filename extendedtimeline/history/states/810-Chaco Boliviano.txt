@@ -1,0 +1,29 @@
+state={
+	id=810
+	name="Chaco Boliviano"
+	resources={
+		steel=10.000
+	}
+	
+
+	history={
+		owner = BOL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = BOL
+		victory_points = {
+			2160 5 
+		}
+
+	}
+	
+	provinces={
+		2160 12916 12979 
+	}
+	manpower= 32554		
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

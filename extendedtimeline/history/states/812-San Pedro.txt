@@ -1,0 +1,24 @@
+state={
+	id=812
+	name="San Pedro"
+	history={
+		owner = PAR
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = PAR
+		victory_points = {
+			2209 15 
+		}
+
+	}
+	provinces={
+		2209 11023 
+	}
+	manpower=154923
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

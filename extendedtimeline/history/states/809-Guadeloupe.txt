@@ -1,0 +1,16 @@
+state={
+	id=809
+	name="Guadeloupe"
+	state_category = tiny_island
+	provinces={
+		9377 
+	}
+	
+	history={
+		owner = FGA
+		add_claim_by = FRA
+		}
+	
+	manpower=190000
+	buildings_max_level_factor=1.000
+}
