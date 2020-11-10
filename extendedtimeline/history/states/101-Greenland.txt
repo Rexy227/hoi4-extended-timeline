@@ -1,0 +1,22 @@
+state=
+{
+	id=101
+	name="Greenland"
+	manpower = 6000
+	
+	state_category = wasteland
+	
+	history=
+	{
+		owner = GRL
+		buildings = {
+			infrastructure = 0
+		}
+		add_claim_by = DEN
+		add_core_of = GRL
+
+	}
+	provinces=
+	{
+10245 10636  13058 13066 	}
+}
