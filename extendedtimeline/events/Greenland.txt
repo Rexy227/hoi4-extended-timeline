@@ -1,0 +1,33 @@
+add_namespace = greenland
+
+#Denmark denies independence
+
+country_event = {
+	id = greenland.1
+	title = greenland.1.t
+	desc = greenland.1.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = greenland.1.a
+		
+		end_puppet = DEN
+		
+		declare_war_on = {
+		target = DEN
+		type = liberate_wargoal
+		}
+
+	}
+		option = {
+		name = greenland.2.a
+		
+		add_opinion_modifier = {
+		target = DEN
+		modifier = small_increase
+		}
+		
+	}
