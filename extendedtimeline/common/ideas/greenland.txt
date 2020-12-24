@@ -49,7 +49,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			autonomy_gain = 1
+			autonomy_gain = 0.1
 			}
 			}
 			
