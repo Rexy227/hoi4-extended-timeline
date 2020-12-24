@@ -1,0 +1,37 @@
+add_namespace = denmark
+
+#Greenlandish Independence
+country_event = {
+	id = denmark.1
+	title = denmark.1.t
+	desc = denmark.1.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = denmark.1.a
+		
+		end_puppet = GRL
+
+	}
+		option = {
+		name = denmark.2.a
+		
+		GRL = {country_event = { days = 1 id = greenland.1 }}
+		
+	}
+		option = {
+		name = denmark.3.a
+		
+		end_puppet = GRL
+		
+		DEN = {
+			declare_war_on = {
+			target = GRL
+			type = annex_everything
+			}
+		}
+	}
+}
