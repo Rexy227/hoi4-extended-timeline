@@ -1,0 +1,358 @@
+﻿search_filter_prios = {
+
+}
+
+focus_tree = {
+	id = albania_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ALB
+		}
+	}
+	
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = ALB_the_kosovo-albanians
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 0
+		cost = 10
+		
+			available_if_capitulated = no
+			
+			allow_branch = { YUG = { owns_state = 802 } }
+			
+			completion_reward = {
+			ALB = {add_state_claim = 802 }
+			}
+			
+	}
+
+	focus = {
+		id = ALB_approach_yugoslavia_on_the_matter
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ALB_the_kosovo-albanians
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		YUG = {country_event = { days = 1 id = yugoslavia.10 }}
+		}
+		
+		prerequisite = { focus = ALB_the_kosovo-albanians }
+		
+	}
+	
+	focus = {
+		id = ALB_enter_discussions
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ALB_approach_yugoslavia_on_the_matter
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		YUG = {country_event = { days = 1 id = yugoslavia.11 }}
+		}
+		
+		bypass = { ALB = { has_idea = ALB_yugoslavia_blocks_out_our_approaches } }
+		
+		prerequisite = { focus = ALB_approach_yugoslavia_on_the_matter }
+		
+	}
+	
+	focus = {
+		id = ALB_ask_for_kosovo
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = ALB_enter_discussions
+		
+		available_if_capitulated = no
+		
+		available = {
+		NOT = { has_idea = ALB_failed_discussion_over_kosovo }
+		NOT = { has_idea = ALB_yugoslavia_blocks_out_our_approaches }
+		}
+			
+		completion_reward = {
+		YUG = {country_event = { days = 1 id = yugoslavia.12 }}
+		}
+		
+		prerequisite = { focus = ALB_enter_discussions }
+		
+		mutually_exclusive = { focus = ALB_demand_kosovo }
+		mutually_exclusive = { focus = ALB_take_kosovo_by_force }
+	}
+	
+	focus = {
+		id = ALB_demand_kosovo
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ALB_enter_discussions
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		
+		}
+		
+		prerequisite = { focus = ALB_enter_discussions }
+		
+		mutually_exclusive = { focus = ALB_ask_for_kosovo }
+		mutually_exclusive = { focus = ALB_take_kosovo_by_force }
+	}
+	
+	focus = {
+		id = ALB_take_kosovo_by_force
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = ALB_enter_discussions
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		
+		}
+		
+		prerequisite = { focus = ALB_enter_discussions }
+		
+		mutually_exclusive = { focus = ALB_ask_for_kosovo }
+		mutually_exclusive = { focus = ALB_demand_kosovo }
+	}
+	
+	focus = {
+		id = ALB_uniting_greater_albania
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ALB_demand_kosovo
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		
+		}
+		
+		prerequisite = { focus = ALB_ask_for_kosovo focus = ALB_demand_kosovo focus = ALB_take_kosovo_by_force }
+		
+		available = { 
+		ALB = { owns_state = 802 } 
+		has_full_control_of_state = 802
+		has_war = NO
+		}
+		
+	}
+
+	focus = {
+		id = ALB_integrating_kosovo
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = ALB_uniting_greater_albania
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		add_political_power = 50
+		}
+		
+		prerequisite = { focus = ALB_uniting_greater_albania }
+		
+		available = { 
+		802 = {is_core_of = ALB}
+		has_full_control_of_state = 802
+		}
+		
+	}
+	
+	focus = {
+		id = ALB_get_rid_of_british_officers
+		icon = GFX_goal_generic_demand_territory
+		x = 6
+		y = 0
+		cost = 10
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		ENG = {
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+			}
+		}
+		ITA = {
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+			}
+		}
+		}
+		
+	}
+	
+	focus = {
+		id = ALB_ask_italy_for_new_instructors
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 0
+		cost = 10
+		relative_position_id = ALB_get_rid_of_british_officers
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		ITA = {
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+			}
+		}
+		ENG = {
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+			}
+		}
+		}
+		
+	}
+	
+	focus = {
+		id = ALB_rising_tensions
+		icon = GFX_goal_generic_demand_territory
+		x = 12
+		y = 0
+		cost = 10
+		
+			available_if_capitulated = no
+			
+		available = {
+		threat > 0.05
+		}
+			
+		completion_reward = {
+		add_war_support = 0.05
+		}
+		
+	}
+	
+	focus = {
+		id = ALB_state_defense_act
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = ALB_rising_tensions
+		prerequisite = { focus = ALB_rising_tensions }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		add_ideas = ALB_preparing_defenses
+		}
+		
+	}
+	
+	focus = {
+		id = ALB_our_political_orientation
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id =  ALB_rising_tensions
+		prerequisite = { focus =  ALB_rising_tensions }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		add_political_Power = 30
+		}
+		
+	}
+	
+	focus = {
+		id = ALB_shift_even_more_power_to_zog
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id =  ALB_our_political_orientation
+		prerequisite = { focus =  ALB_our_political_orientation }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		add_political_Power = 30
+		}
+		mutually_exclusive = { focus = ALB_shift_power_back_to_the_kuvendi }
+	}
+	
+	focus = {
+		id = ALB_strip_the_kuvendi_of_its_powers
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id =  ALB_shift_even_more_power_to_zog
+		prerequisite = { focus =  ALB_shift_even_more_power_to_zog }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		add_political_Power = -30
+		}
+	}
+	
+	focus = {
+		id = ALB_shift_power_back_to_the_kuvendi
+		icon = GFX_goal_generic_demand_territory
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id =  ALB_our_political_orientation
+		prerequisite = { focus =  ALB_our_political_orientation }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		add_political_Power = -30
+		}
+		mutually_exclusive = { focus = ALB_shift_even_more_power_to_zog }
+	}
+	
+	focus = {
+		id = ALB_re-establish_the_senate
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id =  ALB_shift_power_back_to_the_kuvendi
+		prerequisite = { focus =  ALB_shift_power_back_to_the_kuvendi }
+		
+			available_if_capitulated = no
+			
+		completion_reward = {
+		add_political_Power = -30
+		}
+	}
+}
