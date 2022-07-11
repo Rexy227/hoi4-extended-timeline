@@ -1,0 +1,16 @@
+version="1.0"
+tags={
+	"Alternative History"
+	"Balance"
+	"Events"
+	"Gameplay"
+	"Graphics"
+	"Historical"
+	"Ideologies"
+	"Military"
+	"Map"
+	"National Focuses"
+	"Technologies"
+}
+name="Extended Timeline"
+supported_version="1.11.12"
