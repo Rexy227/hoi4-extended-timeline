@@ -1,0 +1,26 @@
+state={
+	id=730
+	name="STATE_730"
+	manpower=1
+	state_category = tiny_island
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower=3425
+		owner = FRA
+		XXX = {remove_state_core = 730}
+		buildings = {
+			infrastructure = 2
+			373 = {
+				naval_base = 1
+			}
+		}
+	}
+	}
+	
+	provinces={ 373 }
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,27 @@
+state={
+	id=786
+	name="STATE_786" # Mauritanian Desert
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 124199
+		owner = FRA
+		add_core_of = MRT
+		XXX = {remove_state_core = 786}
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	}
+
+	provinces={
+		1897 1962 7943 8035 10771 10779 10838
+	}
+
+	local_supplies=0.0 
+}

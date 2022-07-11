@@ -1,0 +1,134 @@
+﻿focus_tree = {
+	id = roman_empire_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RME
+		}
+
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+	
+	#Iberian Peninsula
+	focus = {
+		id = RME_the_hispanian_peninsula
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_hispanian_development
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_hispanian_peninsula }
+		x = -1
+		y = 1
+		relative_position_id = RME_the_hispanian_peninsula
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_hispanian_tribes
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_hispanian_peninsula }
+		x = 1
+		y = 1
+		relative_position_id = RME_the_hispanian_peninsula
+
+		cost = 10
+	}
+	
+	#Maghreb
+	focus = {
+		id = RME_consolidate_northern_africa
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 6
+		y = 0
+
+		cost = 10
+	}
+	
+	#Eastern Africa
+	focus = {
+		id = RME_push_into_kush
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 8
+		y = 0
+
+		cost = 10
+	}
+	
+	#Subject Relations
+	focus = {
+		id = RME_bosporus
+		icon = GFX_goal_generic_allies_build_infantry
+		x =10
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_cappadocia
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 12
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_corduene
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 14
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_iberia
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 16
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_judea
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 18
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_pontus
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 20
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_thracia
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 22
+		y = 0
+
+		cost = 10
+	}
+
+}

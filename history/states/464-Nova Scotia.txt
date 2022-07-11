@@ -1,0 +1,38 @@
+
+state={
+	id=464
+	name="STATE_464"
+	manpower = 1
+	
+	state_category = rural
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 490911
+		owner = CAN
+		victory_points = {
+			7361 3
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			air_base = 3
+			7361 = {
+				naval_base = 4
+
+			}
+		}
+		add_core_of = CAN
+		XXX = {remove_state_core = 464}
+	}
+	}
+
+	provinces={
+		1354 4360 4430 4623 7304 7361 7644 10244 
+	}
+	
+
+	local_supplies=11.0 
+}

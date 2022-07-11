@@ -1,0 +1,32 @@
+state={
+	id=768
+	name="STATE_768" # Rwanda
+	manpower=1
+	state_category = pastoral
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower=1716563
+		owner = BEL
+		add_core_of = RWA
+		XXX = {remove_state_core = 768}
+		victory_points = {
+			9962 1
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+	}
+
+	provinces={
+		9962
+	}
+	
+	buildings_max_level_factor=1.000
+
+	local_supplies=1.0 
+}

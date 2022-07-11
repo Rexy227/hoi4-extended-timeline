@@ -1,0 +1,35 @@
+state={
+	id=548
+	name="STATE_548"
+	manpower=1
+
+	state_category = rural
+	resources={
+		rubber=3 # was: 4
+	}
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower=3515624
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = UGA
+		XXX = {remove_state_core = 548}
+		victory_points = {
+			12989 1
+		}
+	}
+	}
+
+	provinces={
+		3854 7088 7133 8223 12929 12989 13177 
+	}
+	
+	buildings_max_level_factor=1.000
+
+	local_supplies=0.0 
+}
