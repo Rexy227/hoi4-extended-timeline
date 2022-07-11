@@ -1,0 +1,53 @@
+bookmarks = {
+	bookmark = {
+		name = "BEGINNING_NAME"
+		desc = "BEGINNING_DESC"
+		date = 2.1.1.12
+		picture = "GFX_select_date_1939"
+		default_country = "RME"
+
+		"RME"={
+			history = "RME_BEGINNING_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}	
+			focuses = {
+				
+			}			
+		}
+		
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		
+		"VAS"={
+			minor = yes
+			history = "VAS_BEGINNING_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		
+		"VAD"={
+			minor = yes
+			history = "VAD_BEGINNING_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

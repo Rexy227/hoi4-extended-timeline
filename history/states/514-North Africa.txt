@@ -1,0 +1,28 @@
+
+state={
+	id=514
+	name="STATE_514" # Algerian Desert
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 207732
+		owner = FRA
+		add_core_of = ALG
+		XXX = {remove_state_core = 514}
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	}
+
+	provinces={
+		1043 1095 1901 1958 2049 4903 5035 5095 7041 8061 8077 8088 10731 10749 12711 12842 12849 
+	}
+
+	local_supplies=0.0 
+}
