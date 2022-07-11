@@ -1,0 +1,30 @@
+state=
+{
+	id=311
+	name="STATE_311"
+	manpower = 1
+	
+	state_category = pastoral
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 50999
+		add_core_of = BLZ
+		owner = ENG
+		XXX = {remove_state_core = 311}
+		victory_points = {
+			2077 1 
+		}
+		buildings = {
+			infrastructure = 2
+			2077 = {
+				naval_base = 1
+			}
+		}
+	}
+	}
+	provinces= { 2077 }
+
+	local_supplies=0.0 
+}

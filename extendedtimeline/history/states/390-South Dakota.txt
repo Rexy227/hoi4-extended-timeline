@@ -1,0 +1,31 @@
+
+state={
+	id=390
+	name="STATE_390"
+	manpower = 1
+	state_category = rural
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 692848
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		XXX = {remove_state_core = 390}
+		victory_points = {
+			1747 1 
+		}
+	}
+	}
+
+	provinces={
+		1747 1875 3750 4839 4880 7745 7771 7862 10569 10595 12620 12667 
+	}
+
+	local_supplies=0.0 
+}

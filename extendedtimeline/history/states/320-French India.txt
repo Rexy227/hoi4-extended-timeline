@@ -1,0 +1,27 @@
+
+state={
+	id=320
+	name="STATE_320"
+	manpower = 286410
+
+	state_category = enclave
+
+	history={
+	owner = CHO
+		add_core_of = CHO
+		1936.1.1 = {
+		owner = FRA
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 3 #was: 5
+			10149 = {
+				naval_base = 1
+			}
+		}
+	}
+	}
+
+	provinces={ 10149 }
+
+	local_supplies=0.0 
+}
