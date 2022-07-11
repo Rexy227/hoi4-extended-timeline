@@ -1,0 +1,31 @@
+state={
+	id=696
+	name="STATE_696"
+	manpower=1
+	state_category = small_island
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower=37515
+		owner = ENG
+		XXX = {remove_state_core = 696}
+		victory_points = {
+			13010 1
+		}
+		buildings = {
+			infrastructure = 2
+			13010 = {
+				naval_base = 1
+			}
+		}
+	}
+	}
+	
+	provinces={
+		13010 
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,33 @@
+state={
+	id=700
+	name="STATE_700"
+	manpower = 1
+	
+	state_category = pastoral
+	
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 1768499
+		owner = ENG
+		add_core_of = SIE
+		XXX = {remove_state_core = 700}
+		victory_points = {
+			2038 1 
+		}
+		buildings = {
+			infrastructure = 2
+			2038 = {
+				naval_base = 3
+			}
+		}
+	}
+	}
+	
+	provinces={
+		2038 2094 
+	}
+
+	local_supplies=0.0 
+}
