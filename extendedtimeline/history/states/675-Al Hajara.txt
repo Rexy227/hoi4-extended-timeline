@@ -1,0 +1,30 @@
+state={
+	id=675
+	name="STATE_675"
+	manpower = 1
+	
+	state_category = wasteland
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 122092
+		owner = IRQ
+		victory_points = {
+			12413 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = IRQ
+		XXX = {remove_state_core = 675}
+	}
+	}
+	
+	provinces={
+		1631 4951 10744 12413 12879 
+	}
+
+	local_supplies=0.0 
+}
