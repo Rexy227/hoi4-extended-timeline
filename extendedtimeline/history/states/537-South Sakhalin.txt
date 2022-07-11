@@ -1,0 +1,36 @@
+state= {
+	id=537
+	name="STATE_537"
+	manpower = 1
+	resources={
+		oil=3 # was: 4
+	}
+	
+	state_category = rural
+
+	history= {
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 295195
+		owner = JAP
+		add_core_of = JAP
+		XXX = {remove_state_core = 537}
+		buildings = {
+			infrastructure = 2
+			12446 = {
+				naval_base = 1
+
+			}
+		}
+		victory_points = {
+			12446 1
+		}
+	}
+	}
+	provinces=
+	{
+1322 1820 12446 	}
+
+	local_supplies=0.0 
+}
