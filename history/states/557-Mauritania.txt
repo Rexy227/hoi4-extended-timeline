@@ -1,0 +1,30 @@
+
+state={
+	id=557
+	name="STATE_557" # Mauritania
+	manpower = 1
+	
+	state_category = pastoral
+
+	history={owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		owner = FRA
+		add_core_of = MRT
+		add_manpower = 224999
+		XXX = {remove_state_core = 557}
+		victory_points = {
+			5034 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	}
+
+	provinces={
+		5034 5077 7992 8058 10814
+	}
+
+	local_supplies=0.0 
+}

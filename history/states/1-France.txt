@@ -1,0 +1,35 @@
+
+state={
+	id=1
+	name="STATE_1" # Corsica
+	manpower = 9323
+	
+	state_category = pastoral
+
+	history={
+	owner = RME
+		add_core_of = RME
+		1936.1.1 = {
+		add_manpower = 313577
+		owner = FRA
+		victory_points = { 3838 1 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+			3838 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = COR
+		add_core_of = FRA
+		RME = {remove_state_core = 1}
+	}
+	}
+
+	provinces={
+		3838 9851 11804 
+	}
+
+	local_supplies=0.0 
+}

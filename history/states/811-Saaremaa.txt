@@ -1,0 +1,30 @@
+
+state={
+	id=811
+	name="STATE_811"
+	manpower=1
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower=32369
+		owner = EST
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			185 1
+		}
+		add_core_of = EST
+		XXX = {remove_state_core = 811}
+	}
+	}
+
+	provinces={
+		185 6201 
+	}
+	
+	buildings_max_level_factor=1.000
+	state_category=small_island
+}
