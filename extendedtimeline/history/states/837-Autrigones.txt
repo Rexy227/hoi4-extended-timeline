@@ -1,0 +1,23 @@
+state={
+	id=837
+	name="STATE_837"
+	provinces={
+		11688 11854 13220 
+	}
+	manpower=6432
+	state_category=pastoral
+	
+	history={
+		owner = AUT
+		add_core_of = AUT
+		1936.1.1 = {
+			owner = SPR
+			add_core_of = SPR
+
+		}
+
+	}
+	
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
