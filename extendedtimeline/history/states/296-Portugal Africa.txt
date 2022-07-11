@@ -1,0 +1,36 @@
+
+state={
+	id=296
+	name="STATE_296" # Guinea-Bissau
+	manpower = 1
+	
+	state_category = enclave
+	resources={
+		rubber=1 # was: 1
+	}
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 364899
+		owner = POR
+		add_core_of = GNB
+		XXX = {remove_state_core = 296}
+		victory_points = {
+			12891 1
+		}
+		buildings = {
+			infrastructure = 1
+			12891 ={
+				naval_base = 1
+			}
+		}
+	}
+	}
+
+	provinces={
+		12747 12891 
+	}
+
+	local_supplies=0.0 
+}

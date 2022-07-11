@@ -1,0 +1,35 @@
+state={
+	id=274
+	name="STATE_274"
+	manpower=1
+
+	history={
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower=3163599
+		owner = ENG
+		add_core_of = GHA
+		XXX = {remove_state_core = 274}
+		victory_points = {
+			10862 1 
+		}
+		buildings = {
+			infrastructure = 2
+			10862 = {
+				naval_base = 2
+
+			}
+
+		}
+	}
+	}
+
+	provinces={
+		8039 8096 10862 12742 12785 12787 13136 
+	}
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies=0.0 
+}
