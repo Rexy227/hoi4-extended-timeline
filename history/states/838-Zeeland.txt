@@ -1,0 +1,35 @@
+state={
+	id=838
+	name="STATE_838"
+	provinces={
+		480 3211 9431 9498 
+	}
+	manpower=10000
+	
+	history={
+		owner = RME
+		add_core_of = RME
+		1936.1.1 = {
+		owner = HOL
+			add_core_of = HOL
+		buildings = {
+				infrastructure = 4
+				industrial_complex = 5
+				9498 = {
+				naval_base = 10
+				}
+			}
+			
+			victory_points = {
+				3211 10 
+			}
+			
+			victory_points = {
+				9498 20 
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}
