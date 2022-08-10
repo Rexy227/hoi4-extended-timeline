@@ -17,6 +17,28 @@ bookmarks = {
 			}			
 		}
 		
+		"HAC"={
+			history = "HAC_BEGINNING_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}	
+			focuses = {
+				
+			}			
+		}
+		
+		"PAT"={
+			history = "PAT_BEGINNING_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}	
+			focuses = {
+				
+			}			
+		}
+		
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}
@@ -36,6 +58,30 @@ bookmarks = {
 		"VAD"={
 			minor = yes
 			history = "VAD_BEGINNING_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		
+		"CAI"={
+			minor = yes
+			history = "CAI_BEGINNING_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		
+		"AUT"={
+			minor = yes
+			history = "AUT_BEGINNING_DESC"
 			ideology = neutrality
 			ideas = {
 

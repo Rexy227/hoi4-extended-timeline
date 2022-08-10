@@ -7,8 +7,8 @@ state={
 	state_category = rural
 
 	history={
-	owner = PAT
-		add_core_of = PAT
+	owner = INP
+		add_core_of = INP
 		1936.1.1 = {
 		owner = AFG
 		buildings = {
