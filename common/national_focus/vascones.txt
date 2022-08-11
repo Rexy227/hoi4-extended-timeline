@@ -209,6 +209,33 @@
 	}
 	
 	focus = {
+		id = VAS_establish_firmer_trade_relations
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = VAS_promote_merchants }
+		x = 0
+		y = 1
+		relative_position_id = VAS_promote_merchants
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+		
+		available = {
+		country_exists = VAD
+		NOT = {has_war_with = VAD}
+		}
+
+		completion_reward = {
+		add_opinion_modifier = {
+				target = VAD
+				modifier = small_increase
+		}
+		}
+	}
+	
+	focus = {
 		id = VAS_chief_meeting
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = VAS_open_stance }
@@ -532,6 +559,32 @@
 		add_political_power = 10
 		}
 	}
+	
+	focus = {
+		id = VAS_the_tribe_of_the_charistii
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = VAS_the_charistii }
+		x = 0
+		y = 1
+		relative_position_id = VAS_the_charistii
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		country_exists = CAI
+		}
+
+		bypass = {
+				has_war_with = CAI
+			}
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
 
 
 	#Rome
@@ -615,4 +668,66 @@
 		}
 		}
 	}
+	
+	#Development
+	focus = {
+		id = VAS_start_developing_vasconia_proper
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 22
+		y = 0
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = VAS_development_of_our_main_settlement
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = VAS_start_developing_vasconia_proper }
+		x = -1
+		y = 1
+		relative_position_id = VAS_start_developing_vasconia_proper
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+		
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = VAS_connection_between_settlements
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = VAS_start_developing_vasconia_proper }
+		x = 1
+		y = 1
+		relative_position_id = VAS_start_developing_vasconia_proper
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+			
+		completion_reward = {
+		RME = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+				}
+		}
+		}
+	}
+	
 }
