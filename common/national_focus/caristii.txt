@@ -1,0 +1,286 @@
+﻿focus_tree = {
+	id = caristii_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CAI
+		}
+
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+
+	#Regional
+	focus = {
+		id = CAI_securing_peace
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 6
+		y = 0
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+		
+		allow_branch = {
+			}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_secure_the_west
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_securing_peace }
+		x = -1
+		y = 1
+		relative_position_id = CAI_securing_peace
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_secure_the_east
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_securing_peace }
+		x = 1
+		y = 1
+		relative_position_id = CAI_securing_peace
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_a_peaceful_approach
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_secure_the_west }
+		x = -2
+		y = 1
+		relative_position_id = CAI_secure_the_west
+		mutually_exclusive = { focus = CAI_bring_security }
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_bring_security
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_secure_the_east focus = CAI_secure_the_west }
+		x = -1
+		y = 1
+		relative_position_id = CAI_secure_the_east
+		mutually_exclusive = { focus = CAI_a_peaceful_approach }
+		mutually_exclusive = { focus = CAI_bring_peace_and_prosperity }
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_defeat_the_autrigones
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_bring_security }
+		x = -2
+		y = 1
+		relative_position_id = CAI_bring_security
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_coastal_domination
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_bring_security }
+		x = 0
+		y = 1
+		relative_position_id = CAI_bring_security
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_take_care_of_the_varduli
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_bring_security }
+		x = 2
+		y = 1
+		relative_position_id = CAI_bring_security
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_regional_power
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_defeat_the_autrigones }
+		prerequisite = { focus = CAI_coastal_domination }
+		prerequisite = { focus = CAI_take_care_of_the_varduli }
+		x = 0
+		y = 1
+		relative_position_id = CAI_coastal_domination
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_bring_peace_and_prosperity
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = CAI_secure_the_east }
+		x = 2
+		y = 1
+		relative_position_id = CAI_secure_the_east
+		mutually_exclusive = { focus = CAI_bring_security }
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_develop_our_lands
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 12
+		y = 0
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = CAI_roman_relations
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 14
+		y = 0
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		}
+			
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+}
