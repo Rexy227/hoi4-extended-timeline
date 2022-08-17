@@ -15,14 +15,145 @@
 	
 	continuous_focus_position = { x = 50 y = 1000 }
 
+	#Roman Empire
 	focus = {
-		id = XXX_unclaimed_territory
+		id = PAT_relations_with_the_romans
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 2
+		x = 4
 		y = 0
 
-		cost = 1000000000000000000000
-			}
-		}
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_keep_the_peace
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_relations_with_the_romans }
+		x = -3
+		y = 1
+		relative_position_id = PAT_relations_with_the_romans
+		mutually_exclusive = { focus = PAT_reignite_the_conflicts }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_reignite_the_conflicts
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_relations_with_the_romans }
+		x = 3
+		y = 1
+		relative_position_id = PAT_relations_with_the_romans
+		mutually_exclusive = { focus = PAT_keep_the_peace }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_roman_possessions_in_syria
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_reignite_the_conflicts }
+		x = -2
+		y = 1
+		relative_position_id = PAT_reignite_the_conflicts
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_the_roman_protectorate_of_armenia
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_reignite_the_conflicts }
+		x = 0
+		y = 1
+		relative_position_id = PAT_reignite_the_conflicts
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_the_kindgom_of_corduene
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_reignite_the_conflicts }
+		x = 2
+		y = 1
+		relative_position_id = PAT_reignite_the_conflicts
+
+		cost = 10
+	}
+	
+	#Internal Politics
+	focus = {
+		id = PAT_the_rule_of_phraates_v.
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 12
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_the_king
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_the_rule_of_phraates_v. }
+		x = -1
+		y = 1
+		relative_position_id = PAT_the_rule_of_phraates_v.
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_the_queen
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_the_rule_of_phraates_v. }
+		x = 1
+		y = 1
+		relative_position_id = PAT_the_rule_of_phraates_v.
+
+		cost = 10
+	}
+	
+	#Colonisation
+	focus = {
+		id = PAT_the_possibilities_of_peaceful_expansion
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 16
+		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_tame_the_deserts
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_the_possibilities_of_peaceful_expansion }
+		x = 0
+		y = 1
+		relative_position_id = PAT_the_possibilities_of_peaceful_expansion
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_northern_expansion
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_tame_the_deserts }
+		x = -1
+		y = 1
+		relative_position_id = PAT_tame_the_deserts
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_southern_expansion
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_tame_the_deserts }
+		x = 1
+		y = 1
+		relative_position_id = PAT_tame_the_deserts
+
+		cost = 10
 	}
 }

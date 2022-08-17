@@ -29,11 +29,23 @@ puppet = THR
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "2.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	neutrality = 100
+	neutrality = 64
+	democratic = 36
+}
+
+create_country_leader = {
+	name = "Gaius Ocatavius Augustus"
+	desc = "POLITICS_GAIUS_OCTAVIUS_AUGUSTUS_DESC"
+	picture = "Portrait_Rome_Gaius_Octavius_Augustus.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
 }
