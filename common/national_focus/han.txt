@@ -15,14 +15,323 @@
 	
 	continuous_focus_position = { x = 50 y = 1000 }
 
+	#Tributaries
 	focus = {
-		id = XXX_unclaimed_territory
+		id = HAC_the_tributary_system
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 0
+
+		cost = 10
+	}
+	
+	#Xiongnu
+	focus = {
+		id = HAC_xiongnu_relations
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 2
 		y = 0
 
-		cost = 1000000000000000000000
+		cost = 10
+	}
+	
+	#Economy
+	focus = {
+		id = HAC_the_census
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 0
+
+		cost = 10
+	}
+	
+	#Wang Mang
+	focus = {
+		id = HAC_strengthen_wang_mangs_positon
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 12
+		y = 0
+		mutually_exclusive = { focus = HAC_oppose_wang_mang }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_strengthen_the_cult
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_strengthen_wang_mangs_positon }
+		x = 0
+		y = 1
+		relative_position_id = HAC_strengthen_wang_mangs_positon
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_acquire_popularity
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_strengthen_the_cult }
+		x = 0
+		y = 1
+		relative_position_id = HAC_strengthen_the_cult
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_signs_of_divinity
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_acquire_popularity }
+		x = -1
+		y = 1
+		relative_position_id = HAC_acquire_popularity
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_distribute_titles
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_acquire_popularity }
+		x = 1
+		y = 1
+		relative_position_id = HAC_acquire_popularity
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_oppose_wang_mang
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 26
+		y = 0
+		mutually_exclusive = { focus = HAC_strengthen_wang_mangs_positon }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_protect_against_political_backlash
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_oppose_wang_mang }
+		x = -2
+		y = 1
+		relative_position_id = HAC_oppose_wang_mang
+		mutually_exclusive = { focus = HAC_directly_oppose_his_position_of_power }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_directly_oppose_his_position_of_power
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_oppose_wang_mang }
+		x = 2
+		y = 1
+		relative_position_id = HAC_oppose_wang_mang
+		mutually_exclusive = { focus = HAC_protect_against_political_backlash }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_ally_the_weis
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_protect_against_political_backlash focus = HAC_directly_oppose_his_position_of_power }
+		x = -1
+		y = 1
+		relative_position_id = HAC_protect_against_political_backlash
+		mutually_exclusive = { focus = HAC_turn_to_the_fus }
+		mutually_exclusive = { focus = HAC_return_of_the_dings }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_turn_to_the_fus
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_directly_oppose_his_position_of_power }
+		x = -2
+		y = 1
+		relative_position_id = HAC_directly_oppose_his_position_of_power
+		mutually_exclusive = { focus = HAC_ally_the_weis }
+		mutually_exclusive = { focus = HAC_return_of_the_dings }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_return_of_the_dings
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_directly_oppose_his_position_of_power }
+		x = 1
+		y = 1
+		relative_position_id = HAC_directly_oppose_his_position_of_power
+		mutually_exclusive = { focus = HAC_turn_to_the_fus }
+		mutually_exclusive = { focus = HAC_ally_the_weis }
+
+		cost = 10
+	}
+	
+	#Wang Mang after Conspiracy Event
+	focus = {
+		id = HAC_wang_yus_treason
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 8
+		y = 0
+		allow_branch = {
+			has_completed_focus = HAC_strengthen_wang_mangs_positon
 			}
-		}
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_wait_for_the_traitors_to_act
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_wang_yus_treason }
+		x = -1
+		y = 1
+		relative_position_id = HAC_wang_yus_treason
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_take_preemptive_measurements
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_wang_yus_treason }
+		x = 1
+		y = 1
+		relative_position_id = HAC_wang_yus_treason
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_invite_the_weis
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 8
+		y = 0
+		allow_branch = {
+			has_completed_focus = HAC_oppose_wang_mang
+			}
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_race_against_time
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_invite_the_weis }
+		x = 0
+		y = 1
+		relative_position_id = HAC_invite_the_weis
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_supernatural_signs
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_race_against_time }
+		x = -1
+		y = 1
+		relative_position_id = HAC_race_against_time
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_prepare_for_armed_rebellion
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_race_against_time }
+		x = 1
+		y = 1
+		relative_position_id = HAC_race_against_time
+
+		cost = 10
+	}
+	
+	#Emperors Wife
+	focus = {
+		id = HAC_the_emperors_wife
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 18
+		y = 1
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_arrange_a_selection
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_the_emperors_wife }
+		x = -2
+		y = 1
+		relative_position_id = HAC_the_emperors_wife
+		mutually_exclusive = { focus = HAC_propose_a_wife }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_manipulate_the_selection
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_arrange_a_selection }
+		x = -1
+		y = 1
+		relative_position_id = HAC_arrange_a_selection
+		mutually_exclusive = { focus = HAC_have_a_fair_selection }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_have_a_fair_selection
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_arrange_a_selection }
+		x = 1
+		y = 1
+		relative_position_id = HAC_arrange_a_selection
+		mutually_exclusive = { focus = HAC_manipulate_the_selection }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_propose_a_wife
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_the_emperors_wife }
+		x = 2
+		y = 1
+		relative_position_id = HAC_the_emperors_wife
+		mutually_exclusive = { focus = HAC_arrange_a_selection }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_propose_wang_mangs_daughter
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_propose_a_wife }
+		x = -1
+		y = 1
+		relative_position_id = HAC_propose_a_wife
+		mutually_exclusive = { focus = HAC_propose_another }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = HAC_propose_another
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = HAC_propose_a_wife }
+		x = 1
+		y = 1
+		relative_position_id = HAC_propose_a_wife
+		mutually_exclusive = { focus = HAC_propose_wang_mangs_daughter }
+
+		cost = 10
 	}
 }

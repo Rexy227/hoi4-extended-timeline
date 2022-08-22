@@ -13,7 +13,7 @@
 	
 	default = no
 	
-	continuous_focus_position = { x = 50 y = 1000 }
+	continuous_focus_position = { x = 50 y = 2000 }
 	
 	#Iberian Peninsula
 	focus = {
@@ -29,9 +29,31 @@
 		id = RME_hispanian_development
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = RME_the_hispanian_peninsula }
-		x = -1
+		x = -4
 		y = 1
 		relative_position_id = RME_the_hispanian_peninsula
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_develop_the_roads
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_hispanian_development }
+		x = -1
+		y = 1
+		relative_position_id = RME_hispanian_development
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_focus_on_urban_areas
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_hispanian_development }
+		x = 1
+		y = 1
+		relative_position_id = RME_hispanian_development
 
 		cost = 10
 	}
@@ -40,9 +62,53 @@
 		id = RME_hispanian_tribes
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = RME_the_hispanian_peninsula }
-		x = 1
+		x = 4
 		y = 1
 		relative_position_id = RME_the_hispanian_peninsula
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_relations_with_the_vascones
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_hispanian_tribes }
+		x = -3
+		y = 1
+		relative_position_id = RME_hispanian_tribes
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_varduli_relations
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_hispanian_tribes }
+		x = -1
+		y = 1
+		relative_position_id = RME_hispanian_tribes
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_the_caristii
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_hispanian_tribes }
+		x = 1
+		y = 1
+		relative_position_id = RME_hispanian_tribes
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_the_autrigones
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_hispanian_tribes }
+		x = 3
+		y = 1
+		relative_position_id = RME_hispanian_tribes
 
 		cost = 10
 	}
@@ -51,8 +117,30 @@
 	focus = {
 		id = RME_consolidate_northern_africa
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 6
+		x = 12
 		y = 0
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_investments_in_mauretania
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_consolidate_northern_africa }
+		x = -1
+		y = 1
+		relative_position_id = RME_consolidate_northern_africa
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_conquer_the_barbarians
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_consolidate_northern_africa }
+		x = 1
+		y = 1
+		relative_position_id = RME_consolidate_northern_africa
 
 		cost = 10
 	}
@@ -61,7 +149,37 @@
 	focus = {
 		id = RME_push_into_kush
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 8
+		x = 15
+		y = 0
+
+		cost = 10
+	}
+	
+	#Parthia
+	focus = {
+		id = RME_the_parthian_rivalry
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 17
+		y = 0
+
+		cost = 10
+	}
+	
+	#Armenia
+	focus = {
+		id = RME_the_armenian_kingdom
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 19
+		y = 0
+
+		cost = 10
+	}
+	
+	#Development
+	focus = {
+		id = RME_develop_the_empire
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 21
 		y = 0
 
 		cost = 10
@@ -71,8 +189,8 @@
 	focus = {
 		id = RME_bosporus
 		icon = GFX_goal_generic_allies_build_infantry
-		x =10
-		y = 0
+		x = -3
+		y = 5
 
 		cost = 10
 	}
@@ -80,8 +198,8 @@
 	focus = {
 		id = RME_cappadocia
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 12
-		y = 0
+		x = -1
+		y = 5
 
 		cost = 10
 	}
@@ -89,8 +207,8 @@
 	focus = {
 		id = RME_corduene
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 14
-		y = 0
+		x = 1
+		y = 5
 
 		cost = 10
 	}
@@ -98,8 +216,8 @@
 	focus = {
 		id = RME_iberia
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 16
-		y = 0
+		x = -3
+		y = 6
 
 		cost = 10
 	}
@@ -107,8 +225,8 @@
 	focus = {
 		id = RME_judea
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 18
-		y = 0
+		x = -1
+		y = 6
 
 		cost = 10
 	}
@@ -116,8 +234,8 @@
 	focus = {
 		id = RME_pontus
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 20
-		y = 0
+		x = 1
+		y = 6
 
 		cost = 10
 	}
@@ -125,8 +243,8 @@
 	focus = {
 		id = RME_thracia
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 22
-		y = 0
+		x = -3
+		y = 7
 
 		cost = 10
 	}
