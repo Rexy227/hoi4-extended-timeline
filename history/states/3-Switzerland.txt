@@ -2,20 +2,34 @@
 state={
 	id=3
 	name="STATE_3"
-	manpower = 2211689
-	resources={
-		aluminium=18 # was: 28
-	}
+	manpower = 42943
 
-	state_category = large_city
-
+	state_category = rural
 
 	history={
 	owner = RME
 		add_core_of = RME
+		
+	victory_points = { 9620 1 }
+	
+	victory_points = { 9638 1 }
+	
+	victory_points = { 6666 1 }
+	
 		1936.1.1 = {
 		owner = SWI
+		
+		add_manpower = 2168746
+		
+		add_resource={
+		type = aluminium
+		amount = 18
+		}
+		
+		set_state_category = large_city
+		
 		victory_points = { 9620 15 }
+		set_province_name = { id = 9620 name = Berne }
 		buildings = {
 			infrastructure = 3
 			arms_factory = 4

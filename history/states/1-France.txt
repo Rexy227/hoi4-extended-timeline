@@ -11,6 +11,9 @@ state={
 		add_core_of = RME
 		1936.1.1 = {
 		add_manpower = 313577
+		
+		set_state_category = town
+		
 		owner = FRA
 		victory_points = { 3838 1 }
 		buildings = {
