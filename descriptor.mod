@@ -13,4 +13,4 @@ tags={
 	"Technologies"
 }
 name="Extended Timeline"
-supported_version="1.11.12"
+supported_version="1.11.13"

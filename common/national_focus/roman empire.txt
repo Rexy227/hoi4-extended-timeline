@@ -39,6 +39,11 @@
 		relative_position_id = RME_the_hispanian_peninsula
 
 		cost = 10
+		
+		completion_reward = {
+		add_political_power = 10
+		}
+		
 	}
 	
 	focus = {
@@ -72,17 +77,79 @@
 		relative_position_id = RME_the_hispanian_peninsula
 
 		cost = 10
+		
+		completion_reward = {
+		add_political_power = 10
+		}
+		
 	}
 	
 	focus = {
 		id = RME_relations_with_the_vascones
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = RME_hispanian_tribes }
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = RME_hispanian_tribes
 
 		cost = 10
+		
+		completion_reward = {
+		add_political_power = 5
+		}
+		
+	}
+	
+	focus = {
+		id = RME_keep_good_relations
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_relations_with_the_vascones }
+		x = -1
+		y = 1
+		relative_position_id = RME_relations_with_the_vascones
+
+		cost = 10
+		
+		available = {
+		country_exists = VAS
+		NOT = { has_war_with = VAS }
+		}
+		
+		completion_reward = {
+		VAS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+		}
+		}
+		
+	}
+	
+	focus = {
+		id = RME_cut_our_relations
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_relations_with_the_vascones }
+		x = 1
+		y = 1
+		relative_position_id = RME_relations_with_the_vascones
+
+		cost = 10
+		
+		available = {
+		country_exists = VAS
+		NOT = { has_war_with = VAS }
+		}
+		
+		completion_reward = {
+		VAS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+				}
+		}
+		}
+		
 	}
 	
 	focus = {
@@ -126,6 +193,11 @@
 		y = 0
 
 		cost = 10
+		
+		completion_reward = {
+		add_political_power = 15
+		}
+		
 	}
 	
 	focus = {

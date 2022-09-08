@@ -30,6 +30,8 @@ state={
 		
 		victory_points = { 9620 15 }
 		set_province_name = { id = 9620 name = Berne }
+		set_victory_points = { province = 9638 value = 0 }
+		set_victory_points = { province = 6666 value = 0 }
 		buildings = {
 			infrastructure = 3
 			arms_factory = 4

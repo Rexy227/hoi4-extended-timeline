@@ -635,7 +635,12 @@
 		}
 		
 		completion_reward = {
-		add_political_power = 10
+		RME = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+		}
 		}
 	}
 	
@@ -719,14 +724,9 @@
 		ai_will_do = {
 			factor = 0.1
 		}
-			
+		
 		completion_reward = {
-		RME = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = small_decrease
-				}
-		}
+		add_political_power = 10
 		}
 	}
 	
