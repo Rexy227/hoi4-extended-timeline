@@ -3,7 +3,7 @@
 oob = "RME_2"
 
 set_research_slots = 2
-set_stability = 0.8
+set_stability = 0.6
 set_war_support = 0.4
 
 set_technology = {
@@ -37,6 +37,11 @@ set_politics = {
 set_popularities = {
 	neutrality = 64
 	democratic = 36
+}
+
+add_ideas = {
+ancient_era
+empire
 }
 
 create_country_leader = {

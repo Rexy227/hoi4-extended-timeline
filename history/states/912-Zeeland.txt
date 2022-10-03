@@ -1,0 +1,40 @@
+state={
+	id=912
+	name="STATE_912"
+	provinces={
+		480 3211 9431 9498 
+	}
+	manpower=10001
+	
+	state_category=rural
+	
+	history={
+		owner = RME
+		add_core_of = RME
+		1936.1.1 = {
+		add_manpower = 1833242
+		owner = HOL
+		
+		set_state_category = large_city
+		
+			add_core_of = HOL
+		buildings = {
+				infrastructure = 4
+				industrial_complex = 5
+				9498 = {
+				naval_base = 10
+				}
+			}
+			
+			victory_points = {
+				3211 10 
+			}
+			
+			victory_points = {
+				9498 20 
+			}
+		}
+	}
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,0 +1,33 @@
+ideas = {
+
+	country = {
+		ancient_era = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			 always = yes
+			}
+			
+			modifier = {
+			political_power_cost = 1.8
+			conscription_factor = -0.5
+			mobilization_speed = -0.8
+			}
+		}
+		
+		empire = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			 always = yes
+			}
+			
+			modifier = {
+			political_power_gain = 0.25
+			conscription_factor = 0.1
+			}
+		}
+	}
+}

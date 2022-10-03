@@ -2,24 +2,36 @@
 state={
 	id=14
 	name="STATE_14"
-	manpower = 2396600
+	manpower = 23966
 	
-	state_category = city
+	state_category = rural
 
 	history={
 	owner = RME
 		add_core_of = RME
+		
+		victory_points = { 9495 1 }
+		victory_points = { 11508 1 }
+		victory_points = { 9510 1 }
+		victory_points = { 3758 1 }
+		
 		1936.1.1 = {
 		owner = FRA
-		victory_points = {
-			3552 20
-		}
-		victory_points = {
-			6536 5
-		}
-		victory_points = {
-			9495 1
-		}
+		
+		add_manpower = 2372634
+		
+		set_state_category = city
+		
+		victory_points = { 3552 20 }
+		victory_points = { 6536 5 }
+		victory_points = { 9495 1 }
+		
+		set_victory_points = { province = 11508 value = 0 }
+		set_victory_points = { province = 9510 value = 0 }
+		set_victory_points = { province = 3758 value = 0 }
+		
+		set_province_name = { id = 9495 name = Rennes }
+		
 		buildings = {
 			infrastructure = 3
 			dockyard = 5
@@ -38,6 +50,7 @@ state={
 		}
 		add_core_of = FRA
 		add_core_of = BRI
+		RME = {remove_state_core = 14}
 		}
 		1939.1.1 = {
 			buildings = {

@@ -7,13 +7,15 @@ state={
 	state_category = town
 
 	history={
-		victory_points = {
-			651 1
-		}
+		
 		owner = RME
 		add_core_of = RME
 		1936.1.1 = {
 		owner = FRA
+
+		victory_points = {
+			651 1
+		}
 		
 		buildings = {
 			infrastructure = 3

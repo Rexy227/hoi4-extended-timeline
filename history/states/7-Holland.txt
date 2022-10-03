@@ -4,6 +4,8 @@ state={
 	resources={
 		steel=4.000
 	}
+	
+	manpower=2628033
 
 	history={
 	owner = FII
@@ -30,11 +32,6 @@ state={
 				naval_base = 5
 
 			}
-			9498 = {
-				naval_base = 10
-
-			}
-
 		}
 
 	}
@@ -43,7 +40,6 @@ state={
 	provinces={
 		68 391 3314
 	}
-	manpower=4123000
 	buildings_max_level_factor=1.000
 	state_category=metropolis
 

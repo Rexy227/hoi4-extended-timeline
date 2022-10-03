@@ -1,0 +1,29 @@
+state={
+	id=913
+	name="STATE_913"
+	provinces={
+		1593 4599 7491 7560 10357 10359 10510 12333 12359 12491 
+	}
+	
+	manpower = 310486
+	
+	history = {
+	owner = PAT
+		add_core_of = PAT
+		1936.1.1 = {
+	
+		owner = SOV
+		
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		add_core_of = SOV
+		add_core_of = TMS
+	}
+	}
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

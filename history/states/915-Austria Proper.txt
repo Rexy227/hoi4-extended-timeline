@@ -1,0 +1,50 @@
+state={
+	id=915
+	name="STATE_915"
+	provinces={
+		3718 6552 6723 6739 9527 
+	}
+	manpower= 8412
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	
+	state_category = rural
+	
+	history={
+	owner = GTN
+		add_core_of = GTN
+		
+		victory_points = { 11666 1 }
+	
+		victory_points = { 3700 1 }
+	
+		victory_points = { 9648 1 }
+		
+		1936.1.1 = {
+		owner = AUS
+		
+		add_manpower = 415000
+		
+		set_state_category = large_city
+		
+		
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		add_core_of = AUS
+}
+		1938.3.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+		1939.1.1 = {
+			buildings = {
+				anti_air_building = 1
+			}
+		}
+	}
+	
+}

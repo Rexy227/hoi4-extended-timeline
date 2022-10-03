@@ -1,0 +1,30 @@
+state={
+	id=914
+	name="STATE_914"
+	provinces={
+		4563 7477 7563 7635 10406 
+	}
+	manpower = 1
+	
+	history = {
+	owner = XXX
+		add_core_of = XXX
+		1936.1.1 = {
+		add_manpower = 310485
+		owner = SOV
+		
+		buildings = {
+			infrastructure = 1
+
+		}
+		
+		add_core_of = SOV
+		add_core_of = TMS
+		XXX = {remove_state_core = 914}
+	}
+	}
+	
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

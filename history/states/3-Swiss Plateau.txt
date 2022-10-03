@@ -1,0 +1,44 @@
+
+state={
+	id=3
+	name="STATE_3"
+	manpower = 22943
+	resources={
+	}
+
+	state_category = rural
+
+
+	history={
+	owner = RME
+		add_core_of = RME
+		
+	victory_points = { 9620 1 }
+	
+	1936.1.1 ={
+		add_manpower = 138557
+		owner = SWI
+		victory_points = { 9620 15 }
+		victory_points = { 663 10 }
+		
+		set_victory_points = { province = 9638 value = 0 }
+		
+		buildings = {
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 3
+			air_base = 4
+		}
+		add_core_of = SWI
+		
+		set_state_category = city
+		RME = {remove_state_core = 3}
+		}
+	}
+
+	provinces={
+		663 9620 11590 11604 11623
+	}
+
+	local_supplies=0.0 
+}

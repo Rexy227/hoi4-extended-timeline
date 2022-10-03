@@ -1,0 +1,20 @@
+ideas = {
+
+	country = {
+		unclaimed_territory = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			 always = yes
+			}
+			
+			modifier = {
+			political_power_cost = 10
+			recruitable_population_factor = -1
+			monthly_population = -1
+			enemy_justify_war_goal_time = 1000000000
+			}
+		}
+	}
+}

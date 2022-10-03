@@ -2,23 +2,32 @@
 state={
 	id=6
 	name="STATE_6" # Flanders
-	manpower = 4747700
+	manpower = 13593
 	resources={
 		steel=25 # was: 48
 	}
 	
-	state_category = metropolis
+	state_category = pastoral
 
 	history={
 	owner = RME
 		add_core_of = RME
+		victory_points = { 9574 1 }
+
 		1936.1.1 = {
 		owner = BEL
+		
+		add_manpower = 4734118
+		
+		set_state_category = metropolis
+		
 		victory_points = { 516 30 }
 		victory_points = { 6598 30 }
 		victory_points = { 6560 5 }
 		victory_points = { 13068 1 }
 		victory_points = { 3576 1 }
+		set_victory_points = { province = 9574 value = 0 }
+		
 		buildings = {
 			infrastructure = 3 #was: 5
 			arms_factory = 5
@@ -35,6 +44,7 @@ state={
 		add_extra_state_shared_building_slots = 2
 		
 		add_core_of = BEL
+		RME = {remove_state_core = 6}
 	}
 	}
 
