@@ -5,14 +5,11 @@ state={
 		2201 5207 8152 8209 8247 10937 10958 11016 12993 13133 
 	}
 	history = {
-		buildings = {
-			infrastructure = 1
-		}
-		owner = AST
-		add_core_of = AST
+		owner = XXX
+		add_core_of = XXX
 	}
 	state_category = wasteland
-	manpower=1000
+	manpower=1
 
 	buildings_max_level_factor=1.000
 	local_supplies=0.000

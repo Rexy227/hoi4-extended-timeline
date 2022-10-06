@@ -5,10 +5,10 @@ state={
 		1657 4666 13164 
 	}
 	history = {
-		owner = CAN
-		add_core_of = CAN
+		owner = XXX
+		add_core_of = XXX
 	}
-	manpower=50000
+	manpower=1
 	state_category = pastoral
 	buildings_max_level_factor=1.000
 	local_supplies=0.000

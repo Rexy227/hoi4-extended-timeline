@@ -2,17 +2,13 @@
 state = {
 	id = 878
 	name = "STATE_878" # Khatangsky
-	manpower = 15974
+	manpower = 1
 	
 	state_category = pastoral
 
 	history = {
-		owner = SOV
-		buildings = {
-			infrastructure = 1
-		}
-		add_core_of = SOV
-		add_core_of = TAY
+		owner = XXX
+		add_core_of = XXX
 	}
 
 	provinces = {

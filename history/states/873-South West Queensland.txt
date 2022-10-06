@@ -5,14 +5,11 @@ state={
 		2116 2221 5198 10941 12949 
 	}
 	history = {
-		buildings = {
-			infrastructure = 1
-		}
-		owner = AST
-		add_core_of = AST
+		owner = XXX
+		add_core_of = XXX
 	}
 	state_category = pastoral
-	manpower=10000
+	manpower=1
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }

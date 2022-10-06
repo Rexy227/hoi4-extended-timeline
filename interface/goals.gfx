@@ -2979,7 +2979,7 @@ spriteTypes = {
          
         SpriteType = { 
 		name = "GFX_focus_RME_revive_caesar"
-		texturefile = "gfx\interface\goals\RME_revive_caesar.dds"
+		texturefile = "gfx/interface/goals/RME_revive_caesar.dds"
 	}
 
 
