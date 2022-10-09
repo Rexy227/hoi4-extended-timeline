@@ -1,6 +1,6 @@
-﻿capital = 656
+﻿capital = 916
 
-oob = "CRA_656"
+oob = "CRA_916"
 
 set_research_slots = 1
 set_stability = 0.8

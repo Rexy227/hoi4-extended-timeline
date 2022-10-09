@@ -3,36 +3,19 @@ state=
 	id=8
 	name="STATE_8"
 	
-	state_category = town
+	state_category = pastoral
 	
 	manpower = 1432
-	resources={
-		steel=5 # was: 8
-	}
 
 	history=
 	{
 	owner = RME
 		add_core_of = RME
-		1936.1.1 = {
-		owner = LUX
-		
-		add_manpower = 293316
-		
-		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-			industrial_complex = 3
-		}
-		victory_points = { 6583 5 }
-		add_core_of = LUX
-		RME = {remove_state_core = 8}
-	}
 	}
 
 	provinces=
 	{
-6583 	}
+	6583 	}
 
 	local_supplies=0.0 
 }

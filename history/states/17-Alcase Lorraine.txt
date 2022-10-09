@@ -2,32 +2,13 @@
 state={
 	id=17
 	name="STATE_17" # Lorraine
-	manpower = 1517500
+	manpower = 23145
 	
-	state_category = city
-	
-	resources={
-		steel=28 # was: 48
-	}
+	state_category = rural
 
 	history={
 	owner = RME
 		add_core_of = RME
-		1936.1.1 = {
-		owner = FRA
-		victory_points = {
-			9642 5 
-		}
-		victory_points = {
-			11516 5 
-		}
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 1
-			air_base = 5
-		}
-		add_core_of = FRA
-	}
 	}
 
 	provinces={

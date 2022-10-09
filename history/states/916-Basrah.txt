@@ -1,0 +1,18 @@
+state={
+	id=916
+	name="STATE_916"
+	
+	state_category = town
+	
+	history = {
+	owner = CRA
+		add_core_of = CRA
+	}
+	
+	provinces={
+		2089 
+	}
+	manpower=3
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

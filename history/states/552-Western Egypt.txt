@@ -2,21 +2,13 @@
 state={
 	id=552
 	name="STATE_552"
-	manpower = 18539
+	manpower = 1
 	
 	state_category = wasteland
 
 	history={
-	owner = RME
-		add_core_of = RME
-		1936.1.1 = {
-		owner = ENG
-		buildings = {
-			infrastructure = 0
-		}
-
-		add_core_of = EGY
-	}
+	owner = XXX
+		add_core_of = XXX
 	}
 
 	provinces={

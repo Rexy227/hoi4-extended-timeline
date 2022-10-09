@@ -1,7 +1,7 @@
 ﻿l_english:
  STATE_1:0 "Corsica"
- STATE_2:0 "Latium"
- STATE_3:0 "Switzerland"
+ STATE_2:1 "Lazio"
+ STATE_3:1 "Swiss Plateau"
  STATE_4:0 "Lower Austria"
  STATE_5:1 "Ermland-Masuren"
  STATE_6:0 "Vlaanderen"
@@ -19,7 +19,7 @@
  STATE_18:0 "Champagne"
  STATE_19:0 "Aquitaine"
  STATE_20:0 "Rhone"
- STATE_21:0 "Provence"
+ STATE_21:1 "Bouches-du-Rhône"
  STATE_22:0 "Languedoc"
  STATE_23:0 "Poitou"
  STATE_24:0 "Centre"
@@ -914,3 +914,4 @@
  STATE_913:0 "Northern Parthia"
  STATE_914:0 "Northern Balkan"
  STATE_915:1 "Austria Proper"
+ STATE_916:0 "Basrah"

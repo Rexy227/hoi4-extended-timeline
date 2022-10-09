@@ -3,9 +3,6 @@ state={
 	id=15
 	name="STATE_15"
 	manpower = 53786
-	resources={
-		steel=21 # was: 36
-	}
 	
 	state_category = rural
 
@@ -19,45 +16,6 @@ state={
 		victory_points = { 9550 2 }
 		victory_points = { 3579 1 }
 		victory_points = { 11563 1 }
-		
-		1936.1.1 = {
-		owner = FRA
-		
-		add_manpower = 2278314
-		
-		set_state_category = city
-		
-		victory_points = { 9434 10 }
-		victory_points = { 6449 3 }
-		victory_points = { 11563 5 }
-		victory_points = { 485 3 }
-		set_victory_points = { province = 3549 value = 0 }
-		set_victory_points = { province = 6599 value = 0 }
-		set_victory_points = { province = 9550 value = 0 }
-		set_victory_points = { province = 3579 value = 0 }
-		
-		set_province_name = { id = 9434 name = LeHavre }
-		set_province_name = { id = 11563 name = Rouen }
-		
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
-			air_base = 6
-			6449 = {
-				naval_base = 3
-				coastal_bunker = 1
-			}
-			9434 = {
-				naval_base = 5
-				coastal_bunker = 1
-			}
-			485= {
-				naval_base = 1
-			}
-		}
-		add_core_of = FRA
-		RME = {remove_state_core = 15}
-	}
 	}
 
 	provinces={

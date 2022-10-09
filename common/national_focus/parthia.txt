@@ -84,41 +84,120 @@
 	
 	#Internal Politics
 	focus = {
-		id = PAT_the_rule_of_phraates_v.
+		id = PAT_the_italian_son_of_a_slave
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 12
+		x = 14
 		y = 0
 
 		cost = 10
 	}
 	
 	focus = {
-		id = PAT_the_king
+		id = PAT_the_armenian_blunder
 		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = PAT_the_rule_of_phraates_v. }
-		x = -1
+		prerequisite = { focus = PAT_the_italian_son_of_a_slave }
+		x = 0
 		y = 1
-		relative_position_id = PAT_the_rule_of_phraates_v.
+		relative_position_id = PAT_the_italian_son_of_a_slave
+
+		cost = 7
+	}
+	
+	focus = {
+		id = PAT_reassure_nobility
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_the_armenian_blunder }
+		x = 0
+		y = 1
+		relative_position_id = PAT_the_armenian_blunder
+
+		cost = 7
+	}
+	
+	focus = {
+		id = PAT_reassure_the_nobility
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_the_armenian_blunder }
+		x = 0
+		y = 1
+		relative_position_id = PAT_the_armenian_blunder
+
+		cost = 9
+	}
+	
+	focus = {
+		id = PAT_invade_armenia
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_reassure_nobility }
+		x = -2
+		y = 1
+		relative_position_id = PAT_reassure_nobility
 
 		cost = 10
 	}
 	
 	focus = {
-		id = PAT_the_queen
+		id = PAT_the_nobility_have_come_a_knockin
 		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = PAT_the_rule_of_phraates_v. }
-		x = 1
+		prerequisite = { focus = PAT_reassure_nobility }
+		x = 0
 		y = 1
-		relative_position_id = PAT_the_rule_of_phraates_v.
+		relative_position_id = PAT_reassure_nobility
 
 		cost = 10
+	}
+	
+	focus = {
+		id = PAT_purge_the_nobility
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_reassure_nobility }
+		x = 2
+		y = 1
+		relative_position_id = PAT_reassure_nobility
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_the_nobles_back_off
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_invade_armenia focus = PAT_the_nobility_have_come_a_knockin focus = PAT_purge_the_nobility }
+		x = -1
+		y = 1
+		relative_position_id = PAT_the_nobility_have_come_a_knockin
+		mutually_exclusive = { focus = PAT_phraates_goes_to_rome }
+
+		cost = 5
+	}
+	
+	focus = {
+		id = PAT_phraates_v_king_of_kings
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_the_nobles_back_off }
+		x = 0
+		y = 1
+		relative_position_id = PAT_the_nobles_back_off
+
+		cost = 10
+	}
+	
+	focus = {
+		id = PAT_phraates_goes_to_rome
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = PAT_invade_armenia focus = PAT_the_nobility_have_come_a_knockin focus = PAT_purge_the_nobility }
+		x = 1
+		y = 1
+		relative_position_id = PAT_the_nobility_have_come_a_knockin
+		mutually_exclusive = { focus = PAT_the_nobles_back_off }
+
+		cost = 3
 	}
 	
 	#Colonisation
 	focus = {
 		id = PAT_the_possibilities_of_peaceful_expansion
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 16
+		x = 20
 		y = 0
 
 		cost = 10

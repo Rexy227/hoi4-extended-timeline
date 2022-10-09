@@ -14,49 +14,6 @@ state={
 		victory_points = { 11508 1 }
 		victory_points = { 9510 1 }
 		victory_points = { 3758 1 }
-		
-		1936.1.1 = {
-		owner = FRA
-		
-		add_manpower = 2372634
-		
-		set_state_category = city
-		
-		victory_points = { 3552 20 }
-		victory_points = { 6536 5 }
-		victory_points = { 9495 1 }
-		
-		set_victory_points = { province = 11508 value = 0 }
-		set_victory_points = { province = 9510 value = 0 }
-		set_victory_points = { province = 3758 value = 0 }
-		
-		set_province_name = { id = 9495 name = Rennes }
-		
-		buildings = {
-			infrastructure = 3
-			dockyard = 5
-			air_base = 5
-			3552 = {
-				naval_base = 10
-				coastal_bunker = 1
-			}
-			6536 = {
-				naval_base = 4
-				coastal_bunker = 1
-			}
-			9510 = {
-				naval_base = 1
-			}
-		}
-		add_core_of = FRA
-		add_core_of = BRI
-		RME = {remove_state_core = 14}
-		}
-		1939.1.1 = {
-			buildings = {
-				dockyard = 5
-			}
-		}
 	}
 
 	provinces={

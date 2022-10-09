@@ -365,7 +365,7 @@
 		
 		available = {
 		country_exists = VAD
-		VAD = { owns_state = 836 } 
+		VAD = { owns_state = 910 } 
 		}
 
 		bypass = {
@@ -378,7 +378,7 @@
 					modifier = medium_decrease
 				}
 		}
-		VAS = {add_state_claim = 836}
+		VAS = {add_state_claim = 910}
 	}
 	}
 	
@@ -398,7 +398,7 @@
 		
 		available = {
 		country_exists = VAD
-		VAD = { owns_state = 835 } 
+		VAD = { owns_state = 909 } 
 		}
 
 		bypass = {
@@ -411,7 +411,7 @@
 					modifier = medium_decrease
 				}
 		}
-		VAS = {add_state_claim = 835}
+		VAS = {add_state_claim = 909}
 	}
 	}
 	
@@ -431,7 +431,7 @@
 		
 		available = {
 		country_exists = VAD
-		VAD = { owns_state = 836 } 
+		VAD = { owns_state = 910 } 
 		}
 
 		bypass = {
@@ -441,7 +441,7 @@
 		create_wargoal = {
 		type = take_state_focus
 		target = VAD
-		generator = { 836 }
+		generator = { 910 }
 		}
 	}
 	}
@@ -462,7 +462,7 @@
 		
 		available = {
 		country_exists = VAD
-		VAD = { owns_state = 835 } 
+		VAD = { owns_state = 909 } 
 		}
 
 		bypass = {
@@ -472,7 +472,7 @@
 		create_wargoal = {
 		type = take_state_focus
 		target = VAD
-		generator = { 835 }
+		generator = { 909 }
 		}
 		}
 	}
@@ -493,10 +493,10 @@
 		
 		available = {
 		country_exists = VAD
-		VAS = { owns_state = 835 } 
-		has_full_control_of_state = 835
-		VAS = { owns_state = 836 } 
-		has_full_control_of_state = 836
+		VAS = { owns_state = 910 } 
+		has_full_control_of_state = 910
+		VAS = { owns_state = 909 } 
+		has_full_control_of_state = 909
 		}
 
 		bypass = {
@@ -522,10 +522,10 @@
 		}
 		
 		available = {
-		VAS = { owns_state = 835 } 
-		has_full_control_of_state = 835
-		VAS = { owns_state = 836 } 
-		has_full_control_of_state = 836
+		VAS = { owns_state = 910 } 
+		has_full_control_of_state = 910
+		VAS = { owns_state = 909 } 
+		has_full_control_of_state = 909
 		has_war = NO
 		}
 
