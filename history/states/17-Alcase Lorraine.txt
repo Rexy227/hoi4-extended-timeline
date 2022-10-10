@@ -9,6 +9,7 @@ state={
 	history={
 	owner = RME
 		add_core_of = RME
+	victory_points = { 9642 2 }
 	}
 
 	provinces={
