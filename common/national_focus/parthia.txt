@@ -85,7 +85,7 @@
 	#Internal Politics
 	focus = {
 		id = PAT_the_italian_son_of_a_slave
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_goal_son_of_a_slave
 		x = 14
 		y = 0
 
