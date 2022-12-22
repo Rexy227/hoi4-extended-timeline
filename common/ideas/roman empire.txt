@@ -1,0 +1,37 @@
+ideas = {
+
+	country = {
+	            all_ways_lead_to_rome = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			 always = yes
+			}
+                     set_power_balance = {
+                     id = rme_bop
+                     left_side = rme_bop_left_side
+                     right_side = rme_bop_right_side
+                    }
+			
+			modifier = {
+			political_power_cost = 1.8
+			conscription_factor = -0.5
+			mobilization_speed = -0.8
+			}
+		}
+		
+		empire = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			 always = yes
+			}
+			
+			modifier = {
+			political_power_gain = 0.25
+			conscription_factor = 0.1
+			}
+		}
+	}
