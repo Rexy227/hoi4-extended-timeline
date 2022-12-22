@@ -2,7 +2,7 @@
 state={
 	id=22
 	name="STATE_22" # Languedoc
-	manpower = 1691200
+	manpower = 26912
 	
 	
 	state_category = town
@@ -10,19 +10,6 @@ state={
 	history={
 	owner = RME
 		add_core_of = RME
-		1936.1.1 = {
-		owner = FRA
-		victory_points = {
-			9898 1 
-		}
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
-			air_base = 2
-		}
-		add_core_of = OCC
-		add_core_of = FRA
-	}
 	}
 
 	provinces={

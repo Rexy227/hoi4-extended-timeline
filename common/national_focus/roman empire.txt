@@ -25,7 +25,7 @@
 		cost = 10
 		
 		completion_reward = {
-		add_political_power = 15
+		add_political_power = 20
 		}
 		
 	}
@@ -38,7 +38,7 @@
 		y = 1
 		relative_position_id = RME_the_hispanian_peninsula
 
-		cost = 10
+		cost = 5
 		
 		completion_reward = {
 		add_political_power = 10
@@ -54,7 +54,7 @@
 		y = 1
 		relative_position_id = RME_hispanian_development
 
-		cost = 10
+		cost = 6
 	}
 	
 	focus = {
@@ -65,7 +65,7 @@
 		y = 1
 		relative_position_id = RME_hispanian_development
 
-		cost = 10
+		cost = 6
 	}
 	
 	focus = {
@@ -76,7 +76,7 @@
 		y = 1
 		relative_position_id = RME_the_hispanian_peninsula
 
-		cost = 10
+		cost = 7
 		
 		completion_reward = {
 		add_political_power = 10
@@ -94,8 +94,13 @@
 
 		cost = 10
 		
+		available = {
+		country_exists = VAS
+		NOT = { has_war_with = VAS }
+		}
+		
 		completion_reward = {
-		add_political_power = 5
+		add_political_power = 10
 		}
 		
 	}
@@ -107,6 +112,7 @@
 		x = -1
 		y = 1
 		relative_position_id = RME_relations_with_the_vascones
+		mutually_exclusive = { focus = RME_cut_our_relations }
 
 		cost = 10
 		
@@ -133,6 +139,7 @@
 		x = 1
 		y = 1
 		relative_position_id = RME_relations_with_the_vascones
+		mutually_exclusive = { focus = RME_keep_good_relations }
 
 		cost = 10
 		
@@ -159,6 +166,15 @@
 		x = -1
 		y = 1
 		relative_position_id = RME_hispanian_tribes
+		
+		available = {
+		country_exists = VAD
+		NOT = { has_war_with = VAD }
+		}
+		
+		completion_reward = {
+		add_political_power = 10
+		}
 
 		cost = 10
 	}
@@ -170,6 +186,15 @@
 		x = 1
 		y = 1
 		relative_position_id = RME_hispanian_tribes
+		
+		available = {
+		country_exists = CAI
+		NOT = { has_war_with = CAI }
+		}
+		
+		completion_reward = {
+		add_political_power = 10
+		}
 
 		cost = 10
 	}
@@ -181,6 +206,15 @@
 		x = 3
 		y = 1
 		relative_position_id = RME_hispanian_tribes
+		
+		available = {
+		country_exists = AUT
+		NOT = { has_war_with = AUT }
+		}
+		
+		completion_reward = {
+		add_political_power = 10
+		}
 
 		cost = 10
 	}
@@ -232,22 +266,195 @@
 		cost = 10
 	}
 	
-	#Parthia
+	#Internal Politics
+	
 	focus = {
-		id = RME_the_parthian_rivalry
+		id = RME_the_age_of_the_imperator
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 17
+		x = 22
 		y = 0
 
 		cost = 10
 	}
 	
-	#Armenia
+	focus = {
+		id = RME_the_eastern_eagle
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_age_of_the_imperator }
+		x = 3
+		y = 1
+		relative_position_id = RME_the_age_of_the_imperator
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_peace_on_the_euphrates
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_eastern_eagle }
+		x = -2
+		y = 1
+		relative_position_id = RME_the_eastern_eagle
+		mutually_exclusive = { focus = RME_the_parthian_rivalry }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_the_parthian_rivalry
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_eastern_eagle }
+		x = 2
+		y = 1
+		relative_position_id = RME_the_eastern_eagle
+		mutually_exclusive = { focus = RME_peace_on_the_euphrates }
+
+		cost = 10
+	}
+	
 	focus = {
 		id = RME_the_armenian_kingdom
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 19
-		y = 0
+		prerequisite = { focus = RME_the_parthian_rivalry }
+		x = 0
+		y = 1
+		relative_position_id = RME_the_parthian_rivalry
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_the_parthian_campaign
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_armenian_kingdom }
+		x = -1
+		y = 1
+		relative_position_id = RME_the_armenian_kingdom
+		mutually_exclusive = { focus = RME_parthia_conceeds }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_parthia_conceeds
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_armenian_kingdom }
+		x = 1
+		y = 1
+		relative_position_id = RME_the_armenian_kingdom
+		mutually_exclusive = { focus = RME_the_parthian_campaign }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_peace_in_the_east
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_parthian_campaign focus = RME_peace_on_the_euphrates focus = RME_parthia_conceeds }
+		x = -1
+		y = 1
+		relative_position_id = RME_the_parthian_campaign
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_the_future_of_augustus
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_age_of_the_imperator }
+		x = -2
+		y = 1
+		relative_position_id = RME_the_age_of_the_imperator
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_tiberius_caesar
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_future_of_augustus }
+		x = -1
+		y = 1
+		relative_position_id = RME_the_future_of_augustus
+		mutually_exclusive = { focus = RME_agrippa_caesar }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_agrippa_caesar
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_future_of_augustus }
+		x = 1
+		y = 1
+		relative_position_id = RME_the_future_of_augustus
+		mutually_exclusive = { focus = RME_tiberius_caesar }
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_a_stable_future
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_tiberius_caesar focus = RME_agrippa_caesar }
+		x = 1
+		y = 1
+		relative_position_id = RME_tiberius_caesar
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_the_roman_senate
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_a_stable_future }
+		x = -2
+		y = 1
+		relative_position_id = RME_a_stable_future
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_pack_the_senate
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_roman_senate }
+		x = 0
+		y = 1
+		relative_position_id = RME_the_roman_senate
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_the_powers_of_the_imperator
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_a_stable_future }
+		x = 2
+		y = 1
+		relative_position_id = RME_a_stable_future
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_exile_conspirators
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_powers_of_the_imperator }
+		x = -1
+		y = 1
+		relative_position_id = RME_the_powers_of_the_imperator
+
+		cost = 10
+	}
+	
+	focus = {
+		id = RME_exile_imperial_threats
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_the_powers_of_the_imperator }
+		x = 1
+		y = 1
+		relative_position_id = RME_the_powers_of_the_imperator
 
 		cost = 10
 	}
@@ -256,7 +463,7 @@
 	focus = {
 		id = RME_develop_the_empire
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 21
+		x = 32
 		y = 0
 
 		cost = 10
@@ -267,7 +474,7 @@
 		id = RME_bosporus
 		icon = GFX_goal_generic_allies_build_infantry
 		x = -3
-		y = 5
+		y = 6
 
 		cost = 10
 	}
@@ -276,7 +483,7 @@
 		id = RME_cappadocia
 		icon = GFX_goal_generic_allies_build_infantry
 		x = -1
-		y = 5
+		y = 6
 
 		cost = 10
 	}
@@ -285,7 +492,7 @@
 		id = RME_corduene
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
-		y = 5
+		y = 6
 
 		cost = 10
 	}
@@ -294,7 +501,7 @@
 		id = RME_iberia
 		icon = GFX_goal_generic_allies_build_infantry
 		x = -3
-		y = 6
+		y = 7
 
 		cost = 10
 	}
@@ -303,7 +510,7 @@
 		id = RME_judea
 		icon = GFX_goal_generic_allies_build_infantry
 		x = -1
-		y = 6
+		y = 7
 
 		cost = 10
 	}
@@ -312,7 +519,7 @@
 		id = RME_pontus
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
-		y = 6
+		y = 7
 
 		cost = 10
 	}
@@ -321,7 +528,7 @@
 		id = RME_thracia
 		icon = GFX_goal_generic_allies_build_infantry
 		x = -3
-		y = 7
+		y = 8
 
 		cost = 10
 	}
