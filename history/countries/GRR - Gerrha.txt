@@ -1,6 +1,6 @@
-﻿capital = 292
+﻿capital = 765
 
-oob = "GRR_292"
+oob = "GRR_2"
 
 set_research_slots = 1
 set_stability = 0.8

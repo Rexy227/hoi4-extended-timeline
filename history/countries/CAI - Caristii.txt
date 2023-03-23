@@ -1,4 +1,4 @@
-﻿capital = 910
+﻿capital = 792
 
 oob = "CAI_792"
 

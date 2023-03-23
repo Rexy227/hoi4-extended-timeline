@@ -25,7 +25,7 @@
 		cost = 10
 		
 		completion_reward = {
-		add_political_power = 20
+		add_political_power = 30
 		}
 		
 	}
@@ -50,9 +50,43 @@
 		id = RME_develop_the_roads
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = RME_hispanian_development }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = RME_hispanian_development
+		
+		completion_reward = {
+		add_political_power = 10
+		}
+
+		cost = 6
+	}
+	
+	focus = {
+		id = RME_expand_the_network
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_develop_the_roads }
+		x = -1
+		y = 1
+		relative_position_id = RME_develop_the_roads
+		
+		completion_reward = {
+		add_political_power = 10
+		}
+
+		cost = 6
+	}
+	
+	focus = {
+		id = RME_improve_existing_roads
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = RME_develop_the_roads }
+		x = 1
+		y = 1
+		relative_position_id = RME_develop_the_roads
+		
+		completion_reward = {
+		add_political_power = 10
+		}
 
 		cost = 6
 	}
@@ -64,6 +98,10 @@
 		x = 1
 		y = 1
 		relative_position_id = RME_hispanian_development
+		
+		completion_reward = {
+		add_political_power = 10
+		}
 
 		cost = 6
 	}
@@ -101,6 +139,12 @@
 		
 		completion_reward = {
 		add_political_power = 10
+		VAS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+		}
 		}
 		
 	}
@@ -174,6 +218,12 @@
 		
 		completion_reward = {
 		add_political_power = 10
+		VAD = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+		}
 		}
 
 		cost = 10
@@ -194,6 +244,12 @@
 		
 		completion_reward = {
 		add_political_power = 10
+		CAI = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+		}
 		}
 
 		cost = 10
@@ -214,6 +270,12 @@
 		
 		completion_reward = {
 		add_political_power = 10
+		AUT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_increase
+				}
+		}
 		}
 
 		cost = 10
@@ -229,7 +291,7 @@
 		cost = 10
 		
 		completion_reward = {
-		add_political_power = 15
+		add_political_power = 30
 		}
 		
 	}
@@ -242,6 +304,10 @@
 		y = 1
 		relative_position_id = RME_consolidate_northern_africa
 
+		completion_reward = {
+		add_political_power = 10
+		}
+
 		cost = 10
 	}
 	
@@ -253,6 +319,34 @@
 		y = 1
 		relative_position_id = RME_consolidate_northern_africa
 
+		completion_reward = {
+		add_political_power = 10
+		GAE = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+				}
+		}
+		SUS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+				}
+		}
+		MAU = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+				}
+		}
+		MUR = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+				}
+		}
+		}
+
 		cost = 10
 	}
 	
@@ -262,6 +356,17 @@
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 15
 		y = 0
+		
+		completion_reward = {
+		add_political_power = 30
+		
+		KUH = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = small_decrease
+				}
+		}
+		}
 
 		cost = 10
 	}
@@ -273,6 +378,14 @@
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 22
 		y = 0
+		
+		available = {
+		has_government = neutrality
+		}
+		
+		completion_reward = {
+		add_political_power = 50
+		}
 
 		cost = 10
 	}
@@ -470,11 +583,23 @@
 	}
 	
 	#Subject Relations
+	
+	focus = {
+		id = RME_subject_relations
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 6
+
+		cost = 10
+	}
+	
 	focus = {
 		id = RME_bosporus
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -3
-		y = 6
+		prerequisite = { focus = RME_subject_relations }
+		x = -6
+		y = 1
+		relative_position_id = RME_subject_relations
 
 		cost = 10
 	}
@@ -482,8 +607,10 @@
 	focus = {
 		id = RME_cappadocia
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -1
-		y = 6
+		prerequisite = { focus = RME_subject_relations }
+		x = -4
+		y = 1
+		relative_position_id = RME_subject_relations
 
 		cost = 10
 	}
@@ -491,8 +618,10 @@
 	focus = {
 		id = RME_corduene
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 1
-		y = 6
+		prerequisite = { focus = RME_subject_relations }
+		x = -2
+		y = 1
+		relative_position_id = RME_subject_relations
 
 		cost = 10
 	}
@@ -500,8 +629,10 @@
 	focus = {
 		id = RME_iberia
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -3
-		y = 7
+		prerequisite = { focus = RME_subject_relations }
+		x = 0
+		y = 1
+		relative_position_id = RME_subject_relations
 
 		cost = 10
 	}
@@ -509,8 +640,10 @@
 	focus = {
 		id = RME_judea
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -1
-		y = 7
+		prerequisite = { focus = RME_subject_relations }
+		x = 2
+		y = 1
+		relative_position_id = RME_subject_relations
 
 		cost = 10
 	}
@@ -518,8 +651,10 @@
 	focus = {
 		id = RME_pontus
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 1
-		y = 7
+		prerequisite = { focus = RME_subject_relations }
+		x = 4
+		y = 1
+		relative_position_id = RME_subject_relations
 
 		cost = 10
 	}
@@ -527,8 +662,10 @@
 	focus = {
 		id = RME_thracia
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -3
-		y = 8
+		prerequisite = { focus = RME_subject_relations }
+		x = 6
+		y = 1
+		relative_position_id = RME_subject_relations
 
 		cost = 10
 	}

@@ -320,6 +320,35 @@
 	}
 	
 	focus = {
+		id = VAS_a_loose_alliance
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = VAS_declaration_of_friendship }
+		prerequisite = { focus = VAS_establish_firmer_trade_relations }
+		x = 1
+		y = 1
+		relative_position_id = VAS_declaration_of_friendship
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+		
+		available = {
+		country_exists = VAD
+		NOT = {has_war_with = VAD}
+		}
+
+		completion_reward = {
+		add_political_power = 10
+		add_opinion_modifier = {
+				target = VAD
+				modifier = medium_increase
+		}
+		}
+	}
+	
+	focus = {
 		id = VAS_aggressive_stance
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = VAS_relations_with_the_varduli }
@@ -492,7 +521,9 @@
 		}
 		
 		available = {
+		NOT = {
 		country_exists = VAD
+		}
 		VAS = { owns_state = 910 } 
 		has_full_control_of_state = 910
 		VAS = { owns_state = 909 } 

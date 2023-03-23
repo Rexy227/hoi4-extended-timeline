@@ -10,7 +10,7 @@ ideas = {
 			}
 			
 			modifier = {
-			political_power_cost = 1.75
+			political_power_cost = 1.5
 			conscription_factor = -0.5
 			mobilization_speed = -0.8
 			production_speed_buildings_factor = -0.8
@@ -28,7 +28,7 @@ ideas = {
 			}
 			
 			modifier = {
-			political_power_gain = 0.25
+			political_power_gain = 0.4
 			conscription_factor = 0.1
 			}
 		}

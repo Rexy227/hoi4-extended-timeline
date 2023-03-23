@@ -2,27 +2,12 @@
 state={
 	id=5
 	name="STATE_5"
-	manpower = 1238108
-	state_category = town
+	manpower = 3219
+	state_category = pastoral
 
 	history={
 	owner = PRS
 		add_core_of = PRS
-		1936.1.1 = {
-		victory_points = {
-			6375 3
-		}
-		#victory_points = {
-		#	11386 1
-		#}
-		owner = GER
-		controller = GER
-		
-		buildings = {
-			infrastructure = 3
-		}
-		add_core_of = GER
-	}
 	}
 
 	provinces={
