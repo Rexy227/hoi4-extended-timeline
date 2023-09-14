@@ -2,26 +2,14 @@
 state={
 	id=33
 	name="STATE_33"
-	manpower = 636400
+	manpower = 6364
 	
-	state_category = town
+	state_category = pastoral
 
 	history={
 		
 		owner = RME
 		add_core_of = RME
-		1936.1.1 = {
-		owner = FRA
-
-		victory_points = {
-			651 1
-		}
-		
-		buildings = {
-			infrastructure = 3
-		}
-		add_core_of = FRA
-		}
 	}
 
 	provinces={

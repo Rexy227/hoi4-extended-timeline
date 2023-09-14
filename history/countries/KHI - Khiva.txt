@@ -95,5 +95,7 @@ set_popularities = {
 recruit_character = KHI_nedirbay_aytakov
 recruit_character = KHI_junaid_khan
 
-
+add_ideas = {
+ancient_era
+}
 

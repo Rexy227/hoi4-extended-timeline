@@ -2,33 +2,13 @@
 state={
 	id=34
 	name="STATE_34"
-	manpower = 3381300
+	manpower = 11313
 	
-	state_category = large_city
+	state_category = pastoral
 
 	history={
 	owner = RME
 		add_core_of = RME
-		1936.1.1 = {
-		owner = BEL
-		victory_points = {
-			3516 5
-		}
-		victory_points = {
-			11519 10
-		}
-		victory_points = {
-			9536 3
-		}
-		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-			industrial_complex = 4
-			air_base = 1
-
-		}
-		add_core_of = BEL
-	}
 	}
 
 	provinces={

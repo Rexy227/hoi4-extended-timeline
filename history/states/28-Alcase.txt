@@ -2,65 +2,18 @@
 state={
 	id=28
 	name="STATE_28" # Alsace-Lorraine
-	manpower = 1915600
+	manpower = 8913
 	
-	state_category = city
-	resources={
-		steel=100 # was: 236
-	}
+	state_category = pastoral
+
 
 	history={
 	owner = RME
 		add_core_of = RME
-		1936.1.1 = {
-		owner = FRA
-		#victory_points = { 6529 1 }
-		#victory_points = { 549 1 }
-		victory_points = { 678 5 }
-		victory_points = { 9503 5 }
-		victory_points = { 9559 10 }
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 3
-			549 = {
-				bunker = 10
-
-			}
-			678 = {
-				bunker = 10
-
-			}
-			3629 = {
-				bunker = 10
-
-			}
-			6529 = {
-				bunker = 10
-
-			}
-			9503 = {
-				bunker = 10
-
-			}
-			9559 = {
-				bunker = 10
-
-			}
-			11502 = {
-				bunker = 10
-
-			}
-			anti_air_building = 5
-			air_base = 5
-
-		}
-		add_core_of = FRA
-		}
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 4
-			}
-		}
+		
+		victory_points = { 9503 1 }
+		victory_points = { 9559 1 }
+		
 	}
 
 	provinces={

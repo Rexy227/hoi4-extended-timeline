@@ -1,0 +1,23 @@
+﻿division_template = {
+	name = "Caristii Tribal Warriors"	
+	division_names_group = FREN_INFB_01
+	# Note: militia level training and equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	##### Caristii Tribal Warriors #####
+	division= {	
+		name = "Caristii Tribal Warriors"
+		location = 740 # Pais Vasco
+		division_template = "Caristii Tribal Warriors"
+		start_equipment_factor = 0.3
+
+	}
+
+	##### No Notable Naval Forces #####
+}
+
+##### No notable air force #####

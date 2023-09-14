@@ -2674,6 +2674,7 @@
  CHANGE_ADVISOR:1 "\nYou can replace this advisor by clicking here and selecting a replacement."
  
  ancient_era:0 "Ancient Era"
+ chiefdom:0 "Chiefdom"
  empire:0 "Empire"
  unclaimed_territory:0 "Unclaimed Territory"
  all_ways_lead_to_rome:0 "All Ways lead to Rome"

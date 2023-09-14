@@ -10,7 +10,7 @@ state={
 	}
 
 	provinces={
-		68 391 3314
+		68 391 3314 6241
 	}
 	state_category=pastoral
 

@@ -32,4 +32,5 @@ set_popularities = {
 
 add_ideas = {
 ancient_era
+chiefdom
 }

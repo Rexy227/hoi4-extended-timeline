@@ -59,7 +59,7 @@
 		x = 4
 		y = 0
 
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 0.1
@@ -570,10 +570,10 @@
 	focus = {
 		id = VAS_the_charistii
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 10
+		x = 11
 		y = 0
 
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 0.1
@@ -616,6 +616,60 @@
 		add_political_power = 10
 		}
 	}
+	
+	focus = {
+		id = VAS_approach_the_caristii
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = VAS_the_tribe_of_the_charistii }
+		x = -1
+		y = 1
+		relative_position_id = VAS_the_tribe_of_the_charistii
+		mutually_exclusive = { focus = VAS_distance_from_the_caristii }
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		country_exists = CAI
+		}
+
+		bypass = {
+				has_war_with = CAI
+			}
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
+	
+	focus = {
+		id = VAS_distance_from_the_caristii
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = VAS_the_tribe_of_the_charistii }
+		x = 1
+		y = 1
+		relative_position_id = VAS_the_tribe_of_the_charistii
+		mutually_exclusive = { focus = VAS_approach_the_caristii }
+
+		cost = 10
+		
+		ai_will_do = {
+			factor = 0.1
+		}
+
+		available = {
+		country_exists = CAI
+		}
+
+		bypass = {
+				has_war_with = CAI
+			}
+		completion_reward = {
+		add_political_power = 10
+		}
+	}
 
 
 	#Rome
@@ -625,7 +679,7 @@
 		x = 16
 		y = 0
 
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 0.1
@@ -712,7 +766,7 @@
 		x = 22
 		y = 0
 
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 0.1

@@ -1,0 +1,23 @@
+﻿division_template = {
+	name = "Autrigones Tribal Warriors"	
+	division_names_group = FREN_INFB_01
+	# Note: militia level training and equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	##### Autrigones Tribal Warriors #####
+	division= {	
+		name = "Autrigones Tribal Warriors"
+		location = 11688 # Autrigones
+		division_template = "Autrigones Tribal Warriors"
+		start_equipment_factor = 0.3
+
+	}
+
+	##### No Notable Naval Forces #####
+}
+
+##### No notable air force #####

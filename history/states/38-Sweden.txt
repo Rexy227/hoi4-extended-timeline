@@ -3,33 +3,13 @@ state={
 	id=38
 	name="STATE_38"
 	manpower=1
-	resources={
-		steel=40 # was: 62
-	}
 	
-	state_category = town
+	state_category = pastoral
 	
 
 	history={
 	owner = XXX
 		add_core_of = XXX
-		1936.1.1 = {
-		add_manpower=933092
-		owner = SWE
-		victory_points = {
-			156 1 
-		}
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			air_base = 3
-			130 = {
-				naval_base = 1
-			}
-		}
-		add_core_of = SWE
-		XXX = {remove_state_core = 38}
-	}
 	}
 
 	provinces={

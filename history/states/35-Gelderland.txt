@@ -2,29 +2,11 @@ state={
 	id=35
 	name="STATE_35"
 	
-	manpower=1107526
+	manpower=13075
 
 	history={
 	owner = RME
 		add_core_of = RME
-		1936.1.1 = {
-		owner = HOL
-		add_core_of = HOL
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 5
-
-		}
-		victory_points = {
-			3262 5 
-		}
-		victory_points = {
-			6496 3 
-		}
-		victory_points = {
-			11562 1 
-		}
-	}
 	}
 
 	provinces={
@@ -32,7 +14,7 @@ state={
 	}
 	
 	buildings_max_level_factor=1.000
-	state_category=city
+	state_category=pastoral
 
 	local_supplies=0.0 
 }

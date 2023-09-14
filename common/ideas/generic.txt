@@ -16,6 +16,23 @@ ideas = {
 			production_speed_buildings_factor = -0.8
 			production_factory_start_efficiency_factor = -0.8
 			production_factory_efficiency_gain_factor = -0.8
+			generate_wargoal_tension = -1
+			guarantee_tension = -1
+			join_faction_tension = -1
+			}
+		}
+		
+		chiefdom = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed_civil_war = {
+			 always = yes
+			}
+			
+			modifier = {
+			political_power_gain = 0.1
+			conscription_factor = 0.025
 			}
 		}
 		

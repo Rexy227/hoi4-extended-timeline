@@ -1,0 +1,19 @@
+state={
+	id=917
+	name="STATE_917"
+	
+	history={
+	owner = RME
+		add_core_of = RME
+	}
+	
+	provinces={
+		587 3444 3547 9522 
+	}
+	
+	state_category = pastoral
+	
+	manpower=3864
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -2,34 +2,17 @@
 state={
 	id=27
 	name="STATE_27" # Bourgogne
-	manpower = 1370800
+	manpower = 13708
 	
-	state_category = city
-	
-	resources={
-		aluminium=11 # was: 18
-	}
+	state_category = pastoral
 
 	history={
 	owner = RME
 		add_core_of = RME
-		1936.1.1 = {
-		owner = FRA
-		victory_points = {
-			3652 5 
-		}
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
-			air_base = 2
-		}
-		add_core_of = FRA
-		}
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 3
-			}
-		}
+		
+		victory_points = { 3669 1 }
+		victory_points = { 11628 1 }
+		
 	}
 
 	provinces={

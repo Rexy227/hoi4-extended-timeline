@@ -397,6 +397,10 @@
 		x = 3
 		y = 1
 		relative_position_id = RME_the_age_of_the_imperator
+		
+		completion_reward = {
+		add_political_power = 50
+		}
 
 		cost = 10
 	}
@@ -421,6 +425,17 @@
 		y = 1
 		relative_position_id = RME_the_eastern_eagle
 		mutually_exclusive = { focus = RME_peace_on_the_euphrates }
+		
+		
+		completion_reward = {
+		add_political_power = 30
+		PAT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+		}
+		}
 
 		cost = 10
 	}
@@ -478,6 +493,10 @@
 		x = -2
 		y = 1
 		relative_position_id = RME_the_age_of_the_imperator
+		
+		completion_reward = {
+		add_political_power = 50
+		}
 
 		cost = 10
 	}
@@ -589,6 +608,10 @@
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
 		y = 6
+		
+		completion_reward = {
+		add_political_power = 50
+		}
 
 		cost = 10
 	}
